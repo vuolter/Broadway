@@ -1,0 +1,105 @@
+# Theme:     Broadway
+# Author:    Walter Purcaro <vuolter@gmail.com>
+# Platform:  SanDisk Sansa Clip Zip
+# Version:   1.0
+# Licence:   CC-BY-SA 3.0
+
+
+#### Preload images
+
+%xl(E,equalizer.bmp)
+%xl(R,repeat.bmp,0,0,4)
+%xl(S,shuffle.bmp)
+
+
+#### Preload fonts
+
+%Fl(2,30-Sansation_Light.fnt)
+%Fl(3,20-Sansation_Bold.fnt)
+%Fl(4,16-Sansation_Light.fnt)
+%Fl(6,12-Sansation_Bold.fnt)
+
+
+#### Display onscreen
+
+# Show sbs status bar
+%we
+
+# Show custom viewports
+%Vd(m)
+
+
+#### Preload main viewport
+
+# Song title
+%Vl(m,0,0,-,30,2) %Vf(FFE708)
+%s%?it<%it|%fn>
+
+#@NOTE:
+#  %?mp<
+#    0 Stop |
+#    1 Play |
+#    2 Pause |
+#    3 Fast Forward |
+#    4 Rewind |
+#    5 Recording |
+#    6 Recording paused |
+#    7 FM Radio playing |
+#    8 FM Radio paused (muted)
+#  >
+
+# Album artist
+#@NOTE: if statement doesn't work with %mp in wps and fms!
+%Vl(m,0,30,-,20,3) %Vf(08E3E7)
+%s%?if(%px,>,90)<
+%Sx(Next Track:)|
+%?mp<
+|
+%?iA<%iA|%?ia<%ia|%d(1)>>|
+%?iA<%iA|%?ia<%ia|%d(1)>>|
+%?if(%px,>,50)<
+%Sx(Next Track:)|
+%?iA<%iA|%?ia<%ia|%d(1)>>>|
+%?iA<%iA|%?ia<%ia|%d(1)>>>>
+
+# Album title
+%Vl(m,0,50,-,16,4) %Vf(08E3E7)
+%s%?if(%px,>,90)<
+%?It<%It|%Fn>|
+%?mp<
+|
+%?id<%t(8)%id|%?iC<%t(8)%iC|%t(0)>>;%?iy<%t(3)%iy|%t(0)>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;|
+%?id<%t(8)%id|%?iC<%t(8)%iC|%t(0)>>;%?iy<%t(3)%iy|%t(0)>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;|
+%?if(%px,>,50)<
+%?It<%It|%Fn>|
+%?id<%t(8)%id|%?iC<%t(8)%iC|%t(0)>>;%?iy<%t(3)%iy|%t(0)>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>|
+%?id<%t(8)%id|%?iC<%t(8)%iC|%t(0)>>;%?iy<%t(3)%iy|%t(0)>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>>
+
+# Playlist status
+%Vl(m,1,70,57,12,6)
+%?mp<
+|
+%?pS(4)<%Vf(FFE708)|%Vf(08E3E7)>|
+%Vf(FFE708)|
+%Vf(FFE708)|
+%Vf(FFE708)|
+%?pS(4)<%Vf(FFE708)|%Vf(08E3E7)>>
+%s%?mp<
+|
+%?pS(4)<%pp/%pe|%pc/%pt>|
+%t(.5)%pc/%pt;%t(.5);|
+%pc/%pt|
+%pc/%pt|
+%?pS(4)<%pp/%pe|%pc/%pt>>
+
+# Equalizer image
+%Vl(m,61,70,10,10,-) %Vf(08E3E7)
+%St(eq enabled)<%xd(E)>
+
+# Shuffle image
+%Vl(m,71,70,10,10,-) %Vf(08E3E7)
+%xd(S,%ps)
+
+# Repeat image
+%Vl(m,81,70,14,10,-) %Vf(08E3E7)
+%xd(R,%mm)
