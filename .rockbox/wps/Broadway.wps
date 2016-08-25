@@ -49,7 +49,7 @@
 #  >
 
 # Album artist
-#@NOTE: if statement doesn't work with %mp in wps and fms!
+#@NOTE: `if` statement doesn't work with `%mp` in wps and fms!
 %Vl(m,0,30,-,20,3) %Vf(08E3E7)
 %s%?if(%px,>,90)<
 %Sx(Next Track:)|

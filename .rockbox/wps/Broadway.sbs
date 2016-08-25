@@ -225,7 +225,7 @@
 
 # Time text
 %Vl(s,53,86,41,-,6) %Vf(FFE708)
-%ar%cH:%cM
+%ar%?cf<%cH:%cM|%cl:%cM%cp>
 
 
 #### Preload track info viewport

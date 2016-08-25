@@ -42,12 +42,12 @@
 %ty|
 %?Tn<%Tn|%Sx(Unknown)>>|
 %?Tn<%Tn|%Sx(Unknown)>>|
-%t(.3);%t(2.3)%Sx(Loading...);>
+%t(.5);%t(3)%Sx(Loading...);>
 
 # RDS text
 %Vl(m,0,50,-,16,4) %Vf(08E3E7)
 %s%ac%?tx<
-%?tz<%tz|%t(.5);%t(.5).;%t(.5)..;%t(.5)...;>|
+%?tz<%tz|%t(1)...;%t(.5);%t(.5).;%t(.5)..;>|
 No RDS>
 
 # Scan/preset text

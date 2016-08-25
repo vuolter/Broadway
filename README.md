@@ -21,6 +21,7 @@ like *Ekaran*, but **more**...
  - Smart track info in while playing screen, automatically shows playlist position, more album info and next track title
  - Brand new indicator pictures
  - Menu and sub-menu use all the available space on screen to display the entries, never more menu titles on the way
+ - Smart time indicator chooses correct hour format automatically
  - A lot of core display issues now fixed
 
 
