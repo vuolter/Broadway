@@ -7,6 +7,7 @@ like *Ekaran*, but **more**...
 
  - The most complex Rockbox theme all around
  - Code written to be clean and neat according the latest Rockbox specifications
+ - Improved radio info and track info recognition
  - Display signal strength and audio channels in fm radio screen
  - Percentile volume level
  - Percentile radio signal strength
@@ -18,7 +19,7 @@ like *Ekaran*, but **more**...
  - Fully customized skin, expecially for menu, recording and time & date screens
  - Battery info screen with real charging animation
  - Equalizer indicator in while playing screen
- - Smart track info in while playing screen, automatically shows playlist position, more album info and next track title
+ - Dynamic track info in while playing screen, automatically shows playlist position, more album info and next track title
  - Brand new indicator pictures
  - Menu and sub-menu use all the available space on screen to display the entries, never more menu titles on the way
  - Smart time indicator chooses correct hour format automatically

@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   1.0
+# Version:   2.0
 # Licence:   CC-BY-SA 3.0
 
 
@@ -25,9 +25,10 @@
 
 %Vi(context,0,0,-,85,5) %Vf(08E3E7)
 %Vi(fms,0,0,-,82,6) %Vf(FFE708)
-%Vi(rec,0,0,-,85,6) %Vf(FFE708)
-%Vi(screen,0,0,-,-,6) %Vf(FFE708)
-%Vi(time,0,0,-,85,6) %Vf(FFE708)
+%Vi(rec,2,0,94,85,6) %Vf(FFE708)
+%Vi(pscreen,0,0,-,-,6) %Vf(FFE708)
+%Vi(qscreen,1,0,94,-,6) %Vf(FFE708)
+%Vi(time,2,0,92,85,6) %Vf(FFE708)
 %Vi(usb,0,0,-,-,-)
 %Vi(wps,0,0,-,82,5) %Vf(08E3E7)
 
@@ -67,24 +68,24 @@
 #%?cs<
 #%VI(wps)%Lb(l1,-,20)|
 #%VI(wps)%Lb(l1,-,20)|
-#%VI(rec)%Lb(l2,-,13)|
+#%VI(rec)%Lb(l4,-,13)|
 #%VI(fms)%Lb(l2,-,13)|
 #%VI(wps)%Lb(l2,-,13)|
 #%VI(wps)%Lb(l2,-,13)|
 #%VI(wps)%Lb(l2,-,13)|
 #%VI(wps)%Lb(l2,-,13)|
 #%VI(wps)%Lb(l2,-,13)|
-#%VI(screen)|
-#%VI(screen)|
+#%VI(qscreen)|
+#%VI(pscreen)|
 #%VI(context)%Lb(l1,-,20)|
 #%VI(wps)%Lb(l2,-,13)|
 #%VI(context)%Lb(l2,-,13)|
 #%VI(context)%Lb(l2,-,13)|
 #%VI(wps)%Lb(l2,-,13)|
-#%VI(time)%Lb(l2,-,13)|
+#%VI(time)%Lb(l4,-,13)|
 #%VI(wps)%Lb(l3,-,13)|
 #%VI(wps)%Lb(l2,-,13)|
-#%VI(context)%Lb(l2,-,13)|
+#%VI(context)%Lb(l3,-,13)|
 #%VI(usb)>
 
 # Set info viewports (grouped) (USED)
@@ -92,21 +93,25 @@
 %VI(rec)|
 %?if(%cs,=,4)<
 %VI(fms)|
+%?if(%cs,=,10)<
+%VI(qscreen)|
+%?if(%cs,=,11)<
+%VI(pscreen)|
 %?if(%cs,=,17)<
 %VI(time)|
 %?if(%cs,=,21)<
 %VI(usb)|
-%?or(%if(%cs,=,10),%if(%cs,=,11))<
-%VI(screen)|
 %?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15),%if(%cs,=,20),%if(%cs,>,21))<
 %VI(context)|
-%VI(wps)>>>>>>
-%?if(%cs,=,18)<
+%VI(wps)>>>>>>>
+%?or(%if(%cs,=,3),%if(%cs,=,17))<
+%Lb(l4,-,13)|
+%?or(%if(%cs,=,18),%if(%cs,=,20))<
 %Lb(l3,-,13)|
 %?or(%if(%cs,<=,2),%if(%cs,=,12))<
 %Lb(l1,-,20)|
 %?or(%if(%cs,=,10),%if(%cs,=,11),%if(%cs,=,21))<
-|%Lb(l2,-,13)>>>
+|%Lb(l2,-,13)>>>>
 
 # Show custom viewports (un-grouped) (NOT used)
 #%?cs<
@@ -148,10 +153,6 @@
 
 #### Preload menu list viewport
 
-# Rockbox default menu
-#%Vl(l0,0,0,96,14,5)
-#%?Lc<%Vg(08E3E7,08E3E7,000000)%Vs(gradient)|%Vs(color,08E3E7)>%s%LT
-
 # Main menu
 %Vl(l1,4,0,88,20,3) %Vf(FFE708)
 %?Lc<|%Vs(color,08E3E7)>%s%ac%LT
@@ -160,9 +161,13 @@
 %Vl(l2,2,0,92,14,5) %Vf(FFE708)
 %?Lc<|%Vs(color,08E3E7)>%s%LT
 
-# Bookmark menu
+# Block menu
 %Vl(l3,0,0,96,14,5)
-%?Lc<%Vg(FFE708,FFE708,000000)%Vs(gradient)|%Vs(color,FFE708)> %s%LT
+%?Lc<%Vg(08E3E7,08E3E7,000000)%Vs(gradient)|%Vs(color,08E3E7)> %s%LT
+
+# Rec/Time menu
+%Vl(l4,0,0,92,14,5) %Vf(FFE708)
+%?Lc<|%Vs(color,08E3E7)>%s%LT
 
 
 #### Preload battery screen viewport
@@ -219,7 +224,7 @@
 %?bl<N/D|
 %?or(%bc,%if(%bl,>,10),%if(%bt,=,?h ?m))<%bl%%|%t(3)%bl%%;%t(2)%bt;>>
 
-# Lock/rec image
+# Lock/Rec image
 %Vl(s,43,86,9,-,-) %Vf(FFE708)
 %?mp<%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(M)|%t(.5)%xd(M);%t(.5);|%xd(L,%mh)>
 

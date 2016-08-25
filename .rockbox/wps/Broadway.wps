@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   1.0
+# Version:   2.0
 # Licence:   CC-BY-SA 3.0
 
 
@@ -48,19 +48,19 @@
 #    8 FM Radio paused (muted)
 #  >
 
-# Album artist
+# Song artist
 #@NOTE: `if` statement doesn't work with `%mp` in wps and fms!
 %Vl(m,0,30,-,20,3) %Vf(08E3E7)
 %s%?if(%px,>,90)<
 %Sx(Next Track:)|
 %?mp<
 |
-%?iA<%iA|%?ia<%ia|%d(1)>>|
-%?iA<%iA|%?ia<%ia|%d(1)>>|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%Sx(Unknown)>>>>|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%Sx(Unknown)>>>>|
 %?if(%px,>,50)<
 %Sx(Next Track:)|
-%?iA<%iA|%?ia<%ia|%d(1)>>>|
-%?iA<%iA|%?ia<%ia|%d(1)>>>>
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%Sx(Unknown)>>>>>|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%Sx(Unknown)>>>>>>
 
 # Album title
 %Vl(m,0,50,-,16,4) %Vf(08E3E7)
@@ -68,12 +68,12 @@
 %?It<%It|%Fn>|
 %?mp<
 |
-%?id<%t(8)%id|%?iC<%t(8)%iC|%t(0)>>;%?iy<%t(3)%iy|%t(0)>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;|
-%?id<%t(8)%id|%?iC<%t(8)%iC|%t(0)>>;%?iy<%t(3)%iy|%t(0)>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;|
+%?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;|
+%?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;|
 %?if(%px,>,50)<
 %?It<%It|%Fn>|
-%?id<%t(8)%id|%?iC<%t(8)%iC|%t(0)>>;%?iy<%t(3)%iy|%t(0)>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>|
-%?id<%t(8)%id|%?iC<%t(8)%iC|%t(0)>>;%?iy<%t(3)%iy|%t(0)>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>>
+%?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>|
+%?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>>
 
 # Playlist status
 %Vl(m,1,70,57,12,6)
