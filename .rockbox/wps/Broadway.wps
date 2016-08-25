@@ -102,4 +102,4 @@
 
 # Repeat image
 %Vl(m,81,70,14,10,-) %Vf(08E3E7)
-%xd(R,%mm)
+%?mm<|%xd(R,1)|%xd(R,2)|%xd(R,3)|%xd(R,4)>
