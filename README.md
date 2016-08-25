@@ -26,6 +26,13 @@ like *Ekaran*, but **more**...
  - A lot of core display issues now fixed
 
 
+Troubleshotting
+---------------
+
+If the screen gliches after selected the theme in the settings menu,
+just restart the device and all goes fine.
+
+
 Licensing
 ---------
 
