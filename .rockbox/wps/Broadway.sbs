@@ -63,7 +63,7 @@
 #    21 USB screen
 #  >
 
-# Set info viewports (un-grouped) (NOT used)
+# Set info viewports (un-grouped)
 #@NOTE: strange file-browser bug with un-grouped format
 #%?cs<
 #%VI(wps)%Lb(l1,-,20)|
@@ -88,7 +88,7 @@
 #%VI(context)%Lb(l3,-,13)|
 #%VI(usb)>
 
-# Set info viewports (grouped) (USED)
+# Set info viewports (grouped)
 %?if(%cs,=,3)<
 %VI(rec)|
 %?if(%cs,=,4)<
@@ -113,7 +113,7 @@
 %?or(%if(%cs,=,10),%if(%cs,=,11),%if(%cs,=,21))<
 |%Lb(l2,-,13)>>>>
 
-# Show custom viewports (un-grouped) (NOT used)
+# Show custom viewports (un-grouped)
 #%?cs<
 #%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>%Vd(p)|
 #%?mv<%Vd(v)|%Vd(s)>%Vd(p)|
@@ -137,7 +137,7 @@
 #%?mv<%Vd(v)|%Vd(s)>|
 #%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)>
 
-# Show custom viewports (grouped) (USED)
+# Show custom viewports (grouped)
 %?if(%cs,=,3)<
 %Vd(s)|
 %?if(%cs,=,21)<
@@ -174,6 +174,7 @@
 
 %Vl(b,0,0,-,-,-)
 %?bl<%Vf(FFE708)|%Vf(08E3E7)|%Vf(FFE708)>
+%?bc<
 %?bl<
 %t(.2)%xd(B,1);%t(.1)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
 %t(.2)%xd(B,1);%t(.1)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
@@ -181,7 +182,8 @@
 %t(.2)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
 %t(.2)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
 %t(.2)%xd(B,5);%t(.1)%xd(B,6);|
-%xd(B,6)>
+%xd(B,6)>|
+%xd(B,%bl)>
 
 
 #### Preload progress bar viewport

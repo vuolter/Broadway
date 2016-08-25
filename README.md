@@ -10,7 +10,7 @@ Just a theme for [Rockbox](http://www.rockbox.org/),
 designed for the **SanDisk Sansa Clip Zip** device,
 like *Ekaran*, but **more**...
 
- - The most complex Rockbox theme all around
+ - The most complex Rockbox theme for this device all around
  - Code written to be clean and neat according the latest Rockbox specifications
  - Improved radio info and track info recognition
  - Display signal strength and audio channels in fm radio screen
@@ -25,7 +25,7 @@ like *Ekaran*, but **more**...
  - Battery info screen with real charging animation
  - Equalizer indicator in while playing screen
  - Dynamic track info in while playing screen, automatically shows playlist position, more album info and next track title
- - Brand new indicator pictures
+ - Brand new icons
  - Menu and sub-menu use all the available space on screen to display the entries, never more menu titles on the way
  - Smart time indicator chooses correct hour format automatically
  - A lot of core display issues now fixed
