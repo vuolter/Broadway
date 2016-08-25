@@ -1,6 +1,11 @@
 Broadway
 ========
 
+<p align="center">
+<img src="/media/1.bmp" /><img src="/media/2.bmp" /><img src="/media/3.bmp" />
+<img src="/media/4.bmp" /><img src="/media/5.bmp" /><img src="/media/6.bmp" />
+</p>
+
 Just a theme for [Rockbox](http://www.rockbox.org/),
 designed for the **SanDisk Sansa Clip Zip** device,
 like *Ekaran*, but **more**...
