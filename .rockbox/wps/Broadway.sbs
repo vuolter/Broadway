@@ -1,36 +1,22 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   2.0
+# Version:   2.1
 # Licence:   CC-BY-SA 3.0
 
 
-#### Preload images
+#### Declare current screen viewports
 
-%xl(B,battery.bmp,0,0,6)
-%xl(C,charger.bmp,0,0,2)
-%xl(L,lock.bmp)
-%xl(M,mic.bmp)
-%xl(P,bar.bmp)
-
-
-#### Preload fonts
-
-%Fl(3,20-Sansation_Bold.fnt)
-%Fl(5,14-Sansation_Regular.fnt)
-%Fl(6,12-Sansation_Bold.fnt)
-
-
-#### Declare UI Viewport
-
-%Vi(context,0,0,-,85,5) %Vf(08E3E7)
+%Vi(base,2,0,92,85,5) %Vf(08E3E7)
+%Vi(browser,2,0,92,82,5) %Vf(08E3E7)
+%Vi(context,2,0,92,85,6) %Vf(FFE708)
 %Vi(fms,0,0,-,82,6) %Vf(FFE708)
+%Vi(pitch,0,0,-,-,6) %Vf(FFE708)
+%Vi(quick,1,0,94,-,6) %Vf(FFE708)
 %Vi(rec,2,0,94,85,6) %Vf(FFE708)
-%Vi(pscreen,0,0,-,-,6) %Vf(FFE708)
-%Vi(qscreen,1,0,94,-,6) %Vf(FFE708)
 %Vi(time,2,0,92,85,6) %Vf(FFE708)
 %Vi(usb,0,0,-,-,-)
-%Vi(wps,0,0,-,82,5) %Vf(08E3E7)
+%Vi(wps,0,0,-,82,6) %Vf(FFE708)
 
 
 #### Display onscreen
@@ -59,61 +45,62 @@
 #    17 Time and Date Screen |
 #    18 Bookmark browser |
 #    19 Shortcuts menu |
-#    20 Track Info screen |
+#    20 Track Info screen (NOT WORKING) |
 #    21 USB screen
 #  >
 
-# Set info viewports (un-grouped)
-#@NOTE: strange file-browser bug with un-grouped format
+# Set current screen viewports (un-grouped)
+#@NOTE: strange file-browser bug with un-grouped struct
 #%?cs<
-#%VI(wps)%Lb(l1,-,20)|
-#%VI(wps)%Lb(l1,-,20)|
-#%VI(rec)%Lb(l4,-,13)|
-#%VI(fms)%Lb(l2,-,13)|
-#%VI(wps)%Lb(l2,-,13)|
-#%VI(wps)%Lb(l2,-,13)|
-#%VI(wps)%Lb(l2,-,13)|
-#%VI(wps)%Lb(l2,-,13)|
-#%VI(wps)%Lb(l2,-,13)|
-#%VI(qscreen)|
-#%VI(pscreen)|
-#%VI(context)%Lb(l1,-,20)|
-#%VI(wps)%Lb(l2,-,13)|
-#%VI(context)%Lb(l2,-,13)|
-#%VI(context)%Lb(l2,-,13)|
-#%VI(wps)%Lb(l2,-,13)|
-#%VI(time)%Lb(l4,-,13)|
+#%VI(browser)%Lb(l1,-,20)|
 #%VI(wps)%Lb(l3,-,13)|
-#%VI(wps)%Lb(l2,-,13)|
-#%VI(context)%Lb(l3,-,13)|
+#%VI(rec)%Lb(l2,-,13)|
+#%VI(fms)%Lb(l3,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
+#%VI(quick)|
+#%VI(pitch)|
+#%VI(context)%Lb(l1,-,20)|
+#%VI(browser)%Lb(l2,-,13)|
+#%VI(context)%Lb(l2,-,13)|
+#%VI(context)%Lb(l2,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
+#%VI(time)%Lb(l2,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
+#%VI(base)%Lb(l2,-,13)|
 #%VI(usb)>
 
-# Set info viewports (grouped)
+# Set current screen viewports (grouped)
+%?if(%cs,=,2)<
+%VI(wps)|
 %?if(%cs,=,3)<
 %VI(rec)|
 %?if(%cs,=,4)<
 %VI(fms)|
 %?if(%cs,=,10)<
-%VI(qscreen)|
+%VI(quick)|
 %?if(%cs,=,11)<
-%VI(pscreen)|
+%VI(pitch)|
 %?if(%cs,=,17)<
 %VI(time)|
 %?if(%cs,=,21)<
 %VI(usb)|
-%?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15),%if(%cs,=,20),%if(%cs,>,21))<
+%?or(%if(%cs,=,20), %if(%cs,>,21))<
+%VI(base)|
+%?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15))<
 %VI(context)|
-%VI(wps)>>>>>>>
-%?or(%if(%cs,=,3),%if(%cs,=,17))<
-%Lb(l4,-,13)|
-%?or(%if(%cs,=,18),%if(%cs,=,20))<
-%Lb(l3,-,13)|
-%?or(%if(%cs,<=,2),%if(%cs,=,12))<
+%VI(browser)>>>>>>>>>
+%?or(%if(%cs,=,1),%if(%cs,=,12))<
 %Lb(l1,-,20)|
-%?or(%if(%cs,=,10),%if(%cs,=,11),%if(%cs,=,21))<
-|%Lb(l2,-,13)>>>>
+%?or(%if(%cs,=,2),%if(%cs,=,4))<
+%Lb(l3,-,13)|
+%Lb(l2,-,13)>>
 
-# Show custom viewports (un-grouped)
+# Show current screen viewports (un-grouped)
 #%?cs<
 #%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>%Vd(p)|
 #%?mv<%Vd(v)|%Vd(s)>%Vd(p)|
@@ -126,7 +113,7 @@
 #%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>%Vd(p)|
 #|
 #|
-#%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>%Vd(p)|
+#%?mv<%Vd(v)|%Vd(s)>|
 #%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>%Vd(p)|
 #%?mv<%Vd(v)|%Vd(s)>|
 #%?mv<%Vd(v)|%Vd(s)>|
@@ -137,7 +124,7 @@
 #%?mv<%Vd(v)|%Vd(s)>|
 #%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)>
 
-# Show custom viewports (grouped)
+# Show current screen viewports (grouped)
 %?if(%cs,=,3)<
 %Vd(s)|
 %?if(%cs,=,21)<
@@ -146,28 +133,44 @@
 %?mv<%Vd(v)|%Vd(s)>%Vd(p)|
 %?or(%if(%cs,=,10),%if(%cs,=,11))<
 |
-%?or(%if(%cs,=,14),%if(%cs,=,15),%if(%cs,=,17),%if(%cs,=,20),%if(%cs,>,21))<
+%?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15),%if(%cs,=,17),%if(%cs,=,20),%if(%cs,>,21))<
 %?mv<%Vd(v)|%Vd(s)>|
 %?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>%Vd(p)>>>>>
 
 
-#### Preload menu list viewport
+#### Preload fonts
 
-# Main menu
-%Vl(l1,4,0,88,20,3) %Vf(FFE708)
+%Fl(3,20-Sansation_Bold.fnt)
+%Fl(5,14-Sansation_Regular.fnt)
+%Fl(6,12-Sansation_Bold.fnt)
+
+
+#### Preload images
+
+%xl(B,battery.bmp,0,0,6)
+%xl(C,charger.bmp,0,0,2)
+%xl(L,lock.bmp)
+%xl(M,mic.bmp)
+%xl(P,bar.bmp)
+
+
+#### Preload list viewport
+
+# Big entries list
+%Vl(l1,2,0,88,20,3) %Vf(FFE708)
 %?Lc<|%Vs(color,08E3E7)>%s%ac%LT
 
-# Sub menu
-%Vl(l2,2,0,92,14,5) %Vf(FFE708)
+# Little entries list
+%Vl(l2,0,0,92,14,5) %Vf(FFE708)
 %?Lc<|%Vs(color,08E3E7)>%s%LT
 
-# Block menu
-%Vl(l3,0,0,96,14,5)
-%?Lc<%Vg(08E3E7,08E3E7,000000)%Vs(gradient)|%Vs(color,08E3E7)> %s%LT
-
-# Rec/Time menu
-%Vl(l4,0,0,92,14,5) %Vf(FFE708)
+# Little entries list (only wps & fms)
+%Vl(l3,2,0,92,14,5) %Vf(FFE708)
 %?Lc<|%Vs(color,08E3E7)>%s%LT
+
+# Little entries block list
+#%Vl(l4,0,0,96,14,5)
+#%?Lc<%Vg(08E3E7,08E3E7,000000)%Vs(gradient)|%Vs(color,08E3E7)> %s%LT
 
 
 #### Preload battery screen viewport
