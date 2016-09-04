@@ -18,7 +18,7 @@ like *Ekaran*, but **more**...
  - Percentile radio signal strength
  - Huge volume bar with audio level and gain indication
  - Smart charge indicator blinks if connected charger is not charging, alerts if low battery and show estimated time left
- - Advanced status bar displays now playing track title, volume info, lock or recording status and even more, all on request
+ - Advanced status bar displays *Now Playing* track title, volume info, lock or recording status and even more, all on request
  - Completely text translated
  - Interactive progress bar changes color and behaviour according the active screen
  - Fully customized skin, expecially for menu, recording and time & date screens
@@ -28,14 +28,21 @@ like *Ekaran*, but **more**...
  - Brand new icons
  - Menu and sub-menu use all the available space on screen to display the entries, never more menu titles on the way
  - Smart time indicator chooses correct hour format automatically
- - A lot of core display issues now fixed
+ - **A lot of display render issues now fixed**
 
 
 Troubleshotting
 ---------------
 
-If the screen gliches after selected the theme in the settings menu,
+If the screen gliches after enabled the theme in the settings menu,
 just restart the device and all goes fine.
+
+
+Note
+----
+
+The color tonality you can see in the screenshots may result much different when displayed on the device,
+due of the display tecnology of the device itself.
 
 
 Licensing
