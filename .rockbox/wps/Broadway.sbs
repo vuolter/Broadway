@@ -1,11 +1,11 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   2.1
+# Version:   2.2
 # Licence:   CC-BY-SA 3.0
 
 
-#### Declare current screen viewports
+#### Declare ui viewports
 
 %Vi(base,2,0,92,85,5) %Vf(08E3E7)
 %Vi(browser,2,0,92,82,5) %Vf(08E3E7)
@@ -157,20 +157,20 @@
 #### Preload list viewport
 
 # Big entries list
-%Vl(l1,2,0,88,20,3) %Vf(FFE708)
-%?Lc<|%Vs(color,08E3E7)>%s%ac%LT
+%Vl(l1,2,0,88,20,3)
+%?Lc<%Vg(000000,000000,FFE708)|%Vg(000000,000000,08E3E7)>%Vs(gradient)%s%ac%LT
 
 # Little entries list
-%Vl(l2,0,0,92,14,5) %Vf(FFE708)
-%?Lc<|%Vs(color,08E3E7)>%s%LT
+%Vl(l2,0,0,92,14,5)
+%?Lc<%Vg(000000,000000,FFE708)|%Vg(000000,000000,08E3E7)>%Vs(gradient)%s%LT
 
 # Little entries list (only wps & fms)
-%Vl(l3,2,0,92,14,5) %Vf(FFE708)
-%?Lc<|%Vs(color,08E3E7)>%s%LT
+%Vl(l3,2,0,92,14,5)
+%?Lc<%Vg(000000,000000,FFE708)|%Vg(000000,000000,08E3E7)>%Vs(gradient)%s%LT
 
 # Little entries block list
 #%Vl(l4,0,0,96,14,5)
-#%?Lc<%Vg(08E3E7,08E3E7,000000)%Vs(gradient)|%Vs(color,08E3E7)> %s%LT
+#%?Lc<%Vg(08E3E7,08E3E7,000000)|%Vg(000000,000000,08E3E7)>%Vs(gradient) %s%LT
 
 
 #### Preload battery screen viewport
@@ -199,7 +199,7 @@
 #### Preload volume bar viewport
 
 # Volume bar
-%Vl(v,0,86,-,-,-) %VB %Vf(08E3E7)
+%Vl(v,0,86,-,-,-) %VB %Vf(08E3E7) %Vb(000000)
 %pv(0,0,-,-,P)
 
 # Volume text
@@ -241,7 +241,7 @@
 #### Preload track info viewport
 
 # Track info
-%Vl(t,0,85,-,-,6) %Vf(08E3E7)
+%Vl(t,0,85,-,-,6) %Vg(000000,000000,08E3E7)%Vs(gradient)
 %s%?if(%mp,>,6)<
 %?tx<%?tz<%tz|%?ty<%ty|%?Tn<%Tn|%tf MHz>>>|%?Tn<%Tn|%tf MHz>>|
 %?it<%it|%fn>>
