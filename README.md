@@ -10,7 +10,7 @@ Just a theme for [Rockbox](http://www.rockbox.org/),
 designed for the **SanDisk Sansa Clip Zip** device,
 like *Ekaran*, but **more**...
 
- - The most complex Rockbox theme for this device all around
+ - The most advanced Rockbox theme for this device all around
  - Code written to be clean and neat according the latest Rockbox specifications
  - Improved radio info and track info recognition
  - Display signal strength and audio channels in fm radio screen
@@ -31,6 +31,14 @@ like *Ekaran*, but **more**...
  - **A lot of display render issues now fixed**
 
 
+Installation
+------------
+
+Use the official **Rockbox Utility** to automatically download & install themes or
+manually copy the content of the `.rockbox` directory to the same directory on your device.
+That's all folks!
+
+
 Troubleshotting
 ---------------
 
@@ -41,8 +49,58 @@ just restart the device and all goes fine.
 Note
 ----
 
-The color tonality you can see in the screenshots may result much different when displayed on the device,
+The colors tonality of the theme skin you can see in the screenshots may result much different when displayed on the device,
 due of the display tecnology of the device itself.
+
+
+Tips
+----
+
+You can easily change the colors of the theme skin,
+just open the files `Broadway.sbs`, `Broadway.wps`, `Broadway.fms` and `Broadway.cfg`
+with a text-editor and *replace all* the following color codes.
+
+Basically, the default color palette is the same of the theme *Clyp-E*:
+
+Description              | Hex code
+------------------------ | --------
+Background               | 000000
+Foreground               | 08E3E7
+Line selector/Status bar | FFE708
+Low battery/Volume gain  | E70C08
+Full charged             | 08E70C
+
+Other recommended palette:
+
+**Lime**
+
+Description              | Hex code
+------------------------ | --------
+Background               | 000000
+Foreground               | 08E70C
+Line selector/Status bar | FFE708
+Low battery/Volume gain  | E70C08
+Full charged             | 08E70C
+
+**Magenta**
+
+Description              | Hex code
+------------------------ | --------
+Background               | 000000
+Foreground               | E708E3
+Line selector/Status bar | FFE708
+Low battery/Volume gain  | E70C08
+Full charged             | 08E70C
+
+**Red & White**
+
+Description              | Hex code
+------------------------ | --------
+Background               | 000000
+Foreground               | E70C08
+Line selector/Status bar | FFFFFF
+Low battery/Volume gain  | 08E3E7
+Full charged             | FFFFFF
 
 
 Licensing
