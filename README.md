@@ -103,7 +103,7 @@ Low battery/Volume gain  | 08E3E7
 Full charged             | FFFFFF
 
 > **Warning:**
-> Never change the *Background* color codes in `Broadway.sbs`!
+> Please, don't change the *Background* color code.
 
 
 Licensing

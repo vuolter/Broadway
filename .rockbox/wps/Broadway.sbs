@@ -1,22 +1,22 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   2.2
+# Version:   2.3
 # Licence:   CC-BY-SA 3.0
 
 
 #### Declare ui viewports
 
-%Vi(base,2,0,92,85,5) %Vf(08E3E7)
-%Vi(browser,2,0,92,82,5) %Vf(08E3E7)
-%Vi(context,2,0,92,85,6) %Vf(FFE708)
-%Vi(fms,0,0,-,82,6) %Vf(FFE708)
-%Vi(pitch,0,0,-,-,6) %Vf(FFE708)
-%Vi(quick,1,0,94,-,6) %Vf(FFE708)
-%Vi(rec,2,0,94,85,6) %Vf(FFE708)
-%Vi(time,2,0,92,85,6) %Vf(FFE708)
-%Vi(usb,0,0,-,-,-)
-%Vi(wps,0,0,-,82,6) %Vf(FFE708)
+%Vi(base,2,0,92,85,5) %Vf(08E3E7) %Vb(000000)
+%Vi(browser,2,0,92,82,6) %Vf(FFE708) %Vb(000000)
+%Vi(context,2,0,92,85,6) %Vf(FFE708) %Vb(000000)
+#%Vi(fms,0,0,-,82,6) %Vf(FFE708) %Vb(000000)
+%Vi(pitch,0,0,-,-,6) %Vf(FFE708) %Vb(000000)
+%Vi(quick,1,0,94,-,6) %Vf(FFE708) %Vb(000000)
+%Vi(rec,2,0,94,85,6) %Vf(FFE708) %Vb(000000)
+%Vi(time,2,0,92,85,6) %Vf(FFE708) %Vb(000000)
+%Vi(usb,0,0,-,-,-) %Vf(08E3E7) %Vb(000000)
+#%Vi(wps,0,0,-,82,6) %Vf(FFE708) %Vb(000000)
 
 
 #### Display onscreen
@@ -50,7 +50,6 @@
 #  >
 
 # Set current screen viewports (un-grouped)
-#@NOTE: strange file-browser bug with un-grouped struct
 #%?cs<
 #%VI(browser)%Lb(l1,-,20)|
 #%VI(wps)%Lb(l3,-,13)|
@@ -75,29 +74,18 @@
 #%VI(usb)>
 
 # Set current screen viewports (grouped)
-%?if(%cs,=,2)<
-%VI(wps)|
-%?if(%cs,=,3)<
-%VI(rec)|
-%?if(%cs,=,4)<
-%VI(fms)|
-%?if(%cs,=,10)<
-%VI(quick)|
-%?if(%cs,=,11)<
-%VI(pitch)|
-%?if(%cs,=,17)<
-%VI(time)|
-%?if(%cs,=,21)<
-%VI(usb)|
-%?or(%if(%cs,=,20), %if(%cs,>,21))<
-%VI(base)|
-%?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15))<
-%VI(context)|
-%VI(browser)>>>>>>>>>
-%?or(%if(%cs,=,1),%if(%cs,=,12))<
-%Lb(l1,-,20)|
-%?or(%if(%cs,=,2),%if(%cs,=,4))<
-%Lb(l3,-,13)|
+#%?if(%cs,=,2)<%VI(wps)|
+%?if(%cs,=,3)<%VI(rec)|
+#%?if(%cs,=,4)<%VI(fms)|
+%?if(%cs,=,10)<%VI(quick)|
+%?if(%cs,=,11)<%VI(pitch)|
+%?if(%cs,=,17)<%VI(time)|
+%?if(%cs,=,21)<%VI(usb)|
+%?or(%if(%cs,=,20), %if(%cs,>,21))<%VI(base)|
+%?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15))<%VI(context)|
+%VI(browser)>>>>>>>
+%?or(%if(%cs,=,1),%if(%cs,=,12))<%Lb(l1,-,20)|
+%?or(%if(%cs,=,2),%if(%cs,=,4))<%Lb(l3,-,13)|
 %Lb(l2,-,13)>>
 
 # Show current screen viewports (un-grouped)
@@ -125,16 +113,11 @@
 #%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)>
 
 # Show current screen viewports (grouped)
-%?if(%cs,=,3)<
-%Vd(s)|
-%?if(%cs,=,21)<
-%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)|
-%?or(%if(%cs,=,2),%if(%cs,=,4))<
-%?mv<%Vd(v)|%Vd(s)>%Vd(p)|
-%?or(%if(%cs,=,10),%if(%cs,=,11))<
-|
-%?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15),%if(%cs,=,17),%if(%cs,=,20),%if(%cs,>,21))<
-%?mv<%Vd(v)|%Vd(s)>|
+%?if(%cs,=,3)<%Vd(s)|
+%?if(%cs,=,21)<%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)|
+%?or(%if(%cs,=,2),%if(%cs,=,4))<%?mv<%Vd(v)|%Vd(s)>%Vd(p)|
+%?or(%if(%cs,=,10),%if(%cs,=,11))<|
+%?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15),%if(%cs,=,17),%if(%cs,=,20),%if(%cs,>,21))<%?mv<%Vd(v)|%Vd(s)>|
 %?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>%Vd(p)>>>>>
 
 

@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   2.2
+# Version:   2.3
 # Licence:   CC-BY-SA 3.0
 
 
@@ -38,9 +38,7 @@
 %Vl(f,0,30,-,20,3) %Vg(000000,000000,08E3E7)%Vs(gradient)
 %s%ac%?tt<
 %?tx<
-%?ty<
-%ty|
-%?Tn<%Tn|%Sx(Unknown)>>|
+%?ty<%ty|%?Tn<%Tn|%Sx(Unknown)>>|
 %?Tn<%Tn|%Sx(Unknown)>>|
 %t(.5);%t(3)%Sx(Loading...);>
 
@@ -53,7 +51,8 @@ No RDS>
 # Scan/preset text
 %Vl(f,1,70,38,12,6)
 %?tm<%Vf(08E3E7)|%Vg(000000,000000,FFE708)%Vs(gradient)>
-%?tm<%Sx(Scan)|%s%?Ti<%Ti|??>/%Tc>
+%?tm<%Sx(Scan)|
+%s%?Ti<%Ti|??>/%Tc>
 
 # Speaker image
 %Vl(f,42,70,12,10,-)
