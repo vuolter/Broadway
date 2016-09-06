@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   2.3
+# Version:   3.0
 # Licence:   CC-BY-SA 3.0
 
 
@@ -29,13 +29,16 @@
 
 #### Preload screen viewport
 
+# Background fix
+%Vl(f,0,0,-,82,-) %VB %Vb(000000)
+
 # Current frequency
 %Vl(f,0,0,-,30,2) %Vf(FFE708)
 %?mp<|||||||%Vf(FFE708)|%Vf(08E3E7)>
 %ac%tf
 
 # RDS name
-%Vl(f,0,30,-,20,3) %Vg(000000,000000,08E3E7)%Vs(gradient)
+%Vl(f,0,30,-,20,3) %Vf(08E3E7)
 %s%ac%?tt<
 %?tx<
 %?ty<%ty|%?Tn<%Tn|%Sx(Unknown)>>|
@@ -43,14 +46,14 @@
 %t(.5);%t(3)%Sx(Loading...);>
 
 # RDS text
-%Vl(f,0,50,-,16,4) %Vg(000000,000000,08E3E7)%Vs(gradient)
+%Vl(f,0,50,-,16,4) %Vf(08E3E7)
 %s%ac%?tx<
 %?tz<%tz|%t(1)...;%t(.5);%t(.5).;%t(.5)..;>|
 No RDS>
 
 # Scan/preset text
 %Vl(f,1,70,38,12,6)
-%?tm<%Vf(08E3E7)|%Vg(000000,000000,FFE708)%Vs(gradient)>
+%?tm<%Vf(08E3E7)|%Vf(FFE708)>
 %?tm<%Sx(Scan)|
 %s%?Ti<%Ti|??>/%Tc>
 

@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   2.3
+# Version:   3.0
 # Licence:   CC-BY-SA 3.0
 
 
@@ -31,8 +31,11 @@
 
 #### Preload screen viewport
 
+# Background fix
+%Vl(w,0,0,-,82,-) %VB %Vb(000000)
+
 # Song title
-%Vl(w,0,0,-,30,2) %Vg(000000,000000,FFE708)%Vs(gradient)
+%Vl(w,0,0,-,30,2) %Vf(FFE708)
 %s%?it<%it|%fn>
 
 #@NOTE:
@@ -50,7 +53,7 @@
 
 # Song artist
 #@NOTE: `if` statement doesn't work with `%mp` in wps and fms!
-%Vl(w,0,30,-,20,3) %Vg(000000,000000,08E3E7)%Vs(gradient)
+%Vl(w,0,30,-,20,3) %Vf(08E3E7)
 %s%?if(%px,>,90)<
 %Sx(Next Track:)|
 %?mp<|
@@ -62,7 +65,7 @@
 %?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%Sx(Unknown)>>>>>>
 
 # Album title
-%Vl(w,0,50,-,16,4) %Vg(000000,000000,08E3E7)%Vs(gradient)
+%Vl(w,0,50,-,16,4) %Vf(08E3E7)
 %s%?if(%px,>,90)<
 %?It<%It|%Fn>|
 %?mp<|
@@ -76,11 +79,11 @@
 # Playlist status
 %Vl(w,1,70,58,12,6)
 %?mp<|
-%?pS(4)<%Vg(000000,000000,FFE708)|%Vg(000000,000000,08E3E7)>|
-%Vg(000000,000000,FFE708)|
-%Vg(000000,000000,FFE708)|
-%Vg(000000,000000,FFE708)|
-%?pS(4)<%Vg(000000,000000,FFE708)|%Vg(000000,000000,08E3E7)>>%Vs(gradient)
+%?pS(4)<%Vf(FFE708)|%Vf(08E3E7)>|
+%Vf(FFE708)|
+%Vf(FFE708)|
+%Vf(FFE708)|
+%?pS(4)<%Vf(FFE708)|%Vf(08E3E7)>>
 %s%?mp<|
 %?pS(4)<%pp/%pe|%pc/%pt>|
 %t(.5)%pc/%pt;%t(.5);|

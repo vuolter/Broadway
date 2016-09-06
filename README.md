@@ -102,9 +102,6 @@ Line selector/Status bar | FFFFFF
 Low battery/Volume gain  | 08E3E7
 Full charged             | FFFFFF
 
-> **Warning:**
-> Please, don't change the *Background* color code.
-
 
 Licensing
 ---------
