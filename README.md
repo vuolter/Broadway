@@ -2,47 +2,52 @@ Broadway
 ========
 
 <p align="center">
-<img src="/media/1.bmp" /><img src="/media/2.bmp" /><img src="/media/3.bmp" />
-<img src="/media/4.bmp" /><img src="/media/5.bmp" /><img src="/media/6.bmp" />
+<img src="/media/1.bmp" /> <img src="/media/2.bmp" /> <img src="/media/3.bmp" />
+<br>
+<img src="/media/4.bmp" /> <img src="/media/5.bmp" /> <img src="/media/6.bmp" />
+<br>
+<img src="/media/7.bmp" /> <img src="/media/8.bmp" /> <img src="/media/9.bmp" />
 </p>
 
 Just a theme for [Rockbox](http://www.rockbox.org/),
 designed for the **SanDisk Sansa Clip Zip** device,
-like *Ekaran*, but **more**...
+like [Ekaran](http://themes.rockbox.org/index.php?themeid=1762&target=sansaclipzip), but with *few* **extra**...
 
- - The most advanced Rockbox theme for this device all around
- - Code written to be clean and neat according the latest Rockbox specifications
- - Improved radio info and track info recognition
+ - Clean and neat source-code written according the latest Rockbox specifications
+ - Improved radio and while playing screens with more detailed info and indicators
  - Display signal strength and audio channels in fm radio screen
- - Percentile volume level
- - Percentile radio signal strength
- - Huge volume bar with audio level and gain indication
- - Smart charge indicator blinks if connected charger is not charging, alerts if low battery and show estimated time left
- - Advanced status bar displays *Now Playing* track title, volume info, lock or recording status and even more, all on request
- - Completely text translated
- - Interactive progress bar changes color and behaviour according the active screen
- - Fully customized skin, expecially for menu, recording and time & date screens
- - Battery info screen with real charging animation
+ - Volume level **in percentage**
+ - Radio signal strength **in percentage**
+ - Big volume bar with audio level and gain indication
+ - **Charge indicator blinks if connected charger is not charging or warns if low battery, reporting estimated time left**
+ - **Status bar displays on demand the *Now Playing* track title, the volume bar or the battery bar with lock/recording status and current time**
+ - Progress bar set color and behaviour according the active screen
+ - **Fully customized skin featuring brand new main and sub menus, recording screen and time&date screen**
+ - Battery info screen with **real charging animation**
  - Equalizer indicator in while playing screen
- - Dynamic track info in while playing screen, automatically shows playlist position, more album info and next track title
- - Brand new icons
- - Menu and sub-menu use all the available space on screen to display the entries, never more menu titles on the way
- - Smart time indicator chooses correct hour format automatically
- - **A lot of display render issues now fixed**
+ - Dynamic track info in while playing screen automatically shows playlist position, detailed album info and next track title
+ - Refreshed icon pack
+ - **Fully text translated**
+ - Menu and sub-menu use all the available space on screen to display the entries
+ - Time indicator shows the correct hour format set in the settings
+ - **A lot of display rendering issues fixed now**
 
 
 Installation
 ------------
 
-Use the official **Rockbox Utility** to automatically download & install themes or
-manually copy the content of the `.rockbox` directory to the same directory on your device.
-That's all folks!
+Use the official [Rockbox Utility](http://www.rockbox.org/wiki/RockboxUtility#Download)
+to automatically download & install the theme or
+manually download the latest package released [HERE](https://github.com/vuolter/Broadway/releases)
+and unzip it to the root directory of your device
+(making sure the content of the `.rockbox` directory was copied to the same directory on your device).
+*That's all folks!*
 
 
-Troubleshotting
+Troubleshooting
 ---------------
 
-If the screen gliches after enabled the theme in the settings menu,
+If the screen glitches after enable the theme in the settings menu,
 just restart the device and all goes fine.
 
 
@@ -50,17 +55,15 @@ Note
 ----
 
 The colors tonality of the theme skin you can see in the screenshots may result much different when displayed on the device,
-due of the display tecnology of the device itself.
+due of the display technology of the device itself.
 
 
 Tips
 ----
 
 You can easily change the colors of the theme skin,
-just open the files `Broadway.sbs`, `Broadway.wps`, `Broadway.fms` and `Broadway.cfg`
-with a text-editor and *replace all* the following color codes.
-
-Basically, the default color palette is the same of the theme *Clyp-E*:
+just open the files `Broadway.sbs`, `Broadway.wps`, `Broadway.fms`, `Broadway.cfg`
+with a text-editor and *replace all* the following color codes:
 
 Description              | Hex code
 ------------------------ | --------
@@ -68,11 +71,14 @@ Background               | 000000
 Foreground               | 08E3E7
 Line selector/Status bar | FFE708
 Low battery/Volume gain  | E70C08
-Full charged             | 08E70C
+Fully charged battery    | 08E70C
 
-Other recommended palette:
+> **Note:**
+> Basically, the default color palette is the same of the theme [Clyp-E](http://themes.rockbox.org/index.php?themeid=2259&target=sansaclipzip).
 
-**Lime**
+**Other recommended palettes**:
+
+### Lime
 
 Description              | Hex code
 ------------------------ | --------
@@ -80,9 +86,9 @@ Background               | 000000
 Foreground               | 08E70C
 Line selector/Status bar | FFE708
 Low battery/Volume gain  | E70C08
-Full charged             | 08E70C
+Fully charged battery    | 08E70C
 
-**Magenta**
+### Magenta
 
 Description              | Hex code
 ------------------------ | --------
@@ -90,9 +96,9 @@ Background               | 000000
 Foreground               | E708E3
 Line selector/Status bar | FFE708
 Low battery/Volume gain  | E70C08
-Full charged             | 08E70C
+Fully charged battery    | 08E70C
 
-**Red & White**
+### Red & White
 
 Description              | Hex code
 ------------------------ | --------
@@ -100,7 +106,7 @@ Background               | 000000
 Foreground               | E70C08
 Line selector/Status bar | FFFFFF
 Low battery/Volume gain  | 08E3E7
-Full charged             | FFFFFF
+Fully charged battery    | FFFFFF
 
 
 Licensing
