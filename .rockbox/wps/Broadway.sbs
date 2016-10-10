@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   3.0
+# Version:   3.1
 # Licence:   CC-BY-SA 3.0
 
 
@@ -179,19 +179,19 @@
 
 # Progress bar
 %Vl(p,0,82,-,2,-)
-%?if(%mp,>,6)<%Vf(08E3E7)|%Vf(FFE708)>
+%?if(%mp,>,6)<%Vf(08FFE7)|%Vf(FFE708)>
 %?mp<|%pb(0,0,-,-,P)>
 
 
 #### Preload volume bar viewport
 
 # Volume bar
-%Vl(v,0,86,-,-,-) %VB %Vf(08E3E7) %Vb(000000)
+%Vl(v,0,86,-,-,-) %VB %Vf(E708E3) %Vb(000000)
 %pv(0,0,-,-,P)
 
 # Volume text
 %Vl(v,0,86,-,-,6)
-%?pv<%Vf(FFE708)|%Vf(FFE708)|%Vf(E70C08)>
+%?pv<%Vf(FFE708)|%Vf(FFE708)|%Vf(08FFE7)>
 %?pv< Mute|
  %Sx(Volume) %ar%?pv<0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|100>%% |
  %Sx(Gain) %ar%pv dB >
@@ -206,22 +206,23 @@
 # Battery image
 %Vl(s,1,87,7,-,-)
 %?bl<%Vf(FFE708)|
-%?or(%bc,%if(%bl,>,5))<%Vf(FFE708)|%Vf(E70C08)>|
-%?bp<%Vf(08E70C)|%Vf(FFE708)>>
+%?or(%bc,%if(%bl,>,20))<%Vf(FFE708)|%Vf(FF0820)>|
+%?bp<%Vf(20FF08)|%Vf(FFE708)>>
 %?bc<%xd(C,2)|
 %?bp<%?bl<%t(.5)%xd(C,2);%t(.4);|%xd(C,2)>|
-%xd(C,1)>>
+%?if(%bl,>,5)<%xd(C,1)|%t(.5)%xd(C,1);%t(.4);>>>
 
 # Battery text
 %Vl(s,9,86,33,-,6)
 %?bl<%Vf(FFE708)|
-%?or(%bc,%if(%bl,>,5))<%Vf(FFE708)|%Vf(E70C08)>|
-%?bp<%Vf(08E70C)|%Vf(FFE708)>>
+%?or(%bc,%if(%bl,>,20))<%Vf(FFE708)|%Vf(FF0820)>|
+%?bp<%Vf(20FF08)|%Vf(FFE708)>>
 %?bl<N/D|
 %?or(%bc,%if(%bl,>,10),%if(%bt,=,?h ?m))<%bl%%|%t(3)%bl%%;%t(2)%bt;>>
 
 # Lock/Rec image
-%Vl(s,43,86,9,-,-) %Vf(FFE708)
+%Vl(s,43,86,9,-,-)
+%?if(%mp,=,6)<%Vf(FF0820)|%Vf(FFE708)>
 %?mp<%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(M)|%t(.5)%xd(M);%t(.5);|%xd(L,%mh)>
 
 # Time text
@@ -229,12 +230,12 @@
 %ar%?cf<%cH:%cM|%cl:%cM%cp>
 
 
-#### Preload track info viewport
+#### Preload Song bar viewport
 
 # Background fix
 %Vl(t,0,84,-,1,-) %VB %Vb(000000)
 
-# Track info
+# Song bar
 %Vl(t,0,85,-,-,6) %Vf(08E3E7)
 %s%?if(%mp,>,6)<
 %?tx<%?tz<%tz|%?ty<%ty|%?Tn<%Tn|%tf MHz>>>|%?Tn<%Tn|%tf MHz>>|

@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   3.0
+# Version:   3.1
 # Licence:   CC-BY-SA 3.0
 
 
@@ -57,15 +57,15 @@
 %s%?if(%px,>,90)<
 %Sx(Next Track:)|
 %?mp<|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%Sx(Unknown)>>>>|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%Sx(Unknown)>>>>|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%Sx(Unknown)%>>>>>|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%Sx(Unknown)%>>>>>|
 %?if(%px,>,50)<
 %Sx(Next Track:)|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%Sx(Unknown)>>>>>|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%Sx(Unknown)>>>>>>
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%Sx(Unknown)%>>>>>>|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%Sx(Unknown)%>>>>>>>
 
 # Album title
-%Vl(w,0,50,-,16,4) %Vf(08E3E7)
+%Vl(w,0,50,-,16,4) %Vf(08FFE7)
 %s%?if(%px,>,90)<
 %?It<%It|%Fn>|
 %?mp<|
@@ -77,7 +77,7 @@
 %?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>>
 
 # Playlist status
-%Vl(w,1,70,58,12,6)
+%Vl(w,1,70,61,12,6)
 %?mp<|
 %?pS(4)<%Vf(FFE708)|%Vf(08E3E7)>|
 %Vf(FFE708)|
@@ -92,13 +92,13 @@
 %?pS(4)<%pp/%pe|%pc/%pt>>
 
 # Equalizer image
-%Vl(w,62,70,10,10,-) %Vf(08E3E7)
+%Vl(w,65,70,10,10,-) %Vf(08E3E7)
 %St(eq enabled)<%xd(E)>
 
 # Shuffle image
-%Vl(w,72,70,10,10,-) %Vf(08E3E7)
+%Vl(w,75,70,10,10,-) %Vf(08E3E7)
 %xd(S,%ps)
 
 # Repeat image
-%Vl(w,82,70,14,10,-) %Vf(08E3E7)
+%Vl(w,85,70,11,10,-) %Vf(08E3E7)
 %?mm<|%xd(R,1)|%xd(R,2)|%xd(R,3)|%xd(R,4)>
