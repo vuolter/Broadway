@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   3.1
+# Version:   4.0
 # Licence:   CC-BY-SA 3.0
 
 
@@ -24,18 +24,21 @@
 
 #### Preload images
 
+%xl(D,dithering.bmp)
 %xl(E,equalizer.bmp)
+%xl(G,replaygain.bmp)
 %xl(R,repeat.bmp,0,0,4)
 %xl(S,shuffle.bmp)
+%xl(X,crossfade.bmp,0,0,5)
 
 
 #### Preload screen viewport
 
 # Background fix
-%Vl(w,0,0,-,82,-) %VB %Vb(000000)
+%Vl(w,0,0,-,82,-) %VB %Vb(!P000!)
 
 # Song title
-%Vl(w,0,0,-,30,2) %Vf(FFE708)
+%Vl(w,0,0,-,30,2) %Vf(!P016!)
 %s%?it<%it|%fn>
 
 #@NOTE:
@@ -53,19 +56,19 @@
 
 # Song artist
 #@NOTE: `if` statement doesn't work with `%mp` in wps and fms!
-%Vl(w,0,30,-,20,3) %Vf(08E3E7)
+%Vl(w,0,30,-,20,3) %Vf(!P017!)
 %s%?if(%px,>,90)<
-%Sx(Next Track:)|
+%Sx(Next:)|
 %?mp<|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%Sx(Unknown)%>>>>>|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%Sx(Unknown)%>>>>>|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%?if(%ss(0,8,%Sx(Unknown)),=,%Sx(Unknown))<%Sx(Unknown)|n/d>%>>>>>|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%?if(%ss(0,8,%Sx(Unknown)),=,%Sx(Unknown))<%Sx(Unknown)|n/d>%>>>>>|
 %?if(%px,>,50)<
-%Sx(Next Track:)|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%Sx(Unknown)%>>>>>>|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%Sx(Unknown)%>>>>>>>
+%Sx(Next:)|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%?if(%ss(0,8,%Sx(Unknown)),=,%Sx(Unknown))<%Sx(Unknown)|n/d>%>>>>>>|
+%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%<%?if(%ss(0,8,%Sx(Unknown)),=,%Sx(Unknown))<%Sx(Unknown)|n/d>%>>>>>>>
 
 # Album title
-%Vl(w,0,50,-,16,4) %Vf(08FFE7)
+%Vl(w,0,50,-,16,4) %Vf(!P018!)
 %s%?if(%px,>,90)<
 %?It<%It|%Fn>|
 %?mp<|
@@ -77,28 +80,32 @@
 %?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>>
 
 # Playlist status
-%Vl(w,1,70,61,12,6)
+%Vl(w,1,70,60,12,6)
 %?mp<|
-%?pS(4)<%Vf(FFE708)|%Vf(08E3E7)>|
-%Vf(FFE708)|
-%Vf(FFE708)|
-%Vf(FFE708)|
-%?pS(4)<%Vf(FFE708)|%Vf(08E3E7)>>
-%s%?mp<|
+%?pS(4)<%Vf(!P019!)|%Vf(!S019!)>|
+%Vf(!P019!)|
+%Vf(!P019!)|
+%Vf(!P019!)|
+%?pS(4)<%Vf(!P019!)|%Vf(!S019!)>>
+%s%aL%?mp<|
 %?pS(4)<%pp/%pe|%pc/%pt>|
 %t(.5)%pc/%pt;%t(.5);|
 %pc/%pt|
 %pc/%pt|
 %?pS(4)<%pp/%pe|%pc/%pt>>
 
-# Equalizer image
-%Vl(w,65,70,10,10,-) %Vf(08E3E7)
-%St(eq enabled)<%xd(E)>
+# Equalizer/Crossfade image
+%Vl(w,64,70,14,10,-) %Vf(!P020!)
+%t(8)%?mm<|%?ps<%xd(E,%St(eq enabled))>>;%?xf<%t(0)|%t(4)%xd(X,%xf,-1)>;
 
 # Shuffle image
-%Vl(w,75,70,10,10,-) %Vf(08E3E7)
-%xd(S,%ps)
+%Vl(w,74,70,10,10,-) %Vf(!P020!)
+%t(8)%?ps<%?mm<%xd(E,%St(eq enabled))|%xd(S,%ps)>|%?mm<|%xd(E,%St(eq enabled))>>;%?xf<%t(0)|%t(4)>;
 
-# Repeat image
-%Vl(w,85,70,11,10,-) %Vf(08E3E7)
-%?mm<|%xd(R,1)|%xd(R,2)|%xd(R,3)|%xd(R,4)>
+# Dithering image
+%Vl(w,78,70,6,10,-) %Vf(!P020!)
+%t(8);%?St(dithering enabled)<%t(4)%xd(D,%St(dithering enabled))|%t(0)>;
+
+# Repeat/ReplayGain image
+%Vl(w,84,70,11,10,-) %Vf(!P020!)
+%t(8)%?mm<%?ps<%xd(S,%ps)|%xd(E,%St(eq enabled))>|%xd(R,%mm,-1)>;%?rg<%t(0)|%t(4)%xd(G)>;

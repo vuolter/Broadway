@@ -1,21 +1,20 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   3.1
+# Version:   4.0
 # Licence:   CC-BY-SA 3.0
 
 
 #### Declare ui viewports
 
-%Vi(base,2,0,92,84,5) %Vf(08E3E7) %Vb(000000)
-%Vi(browser,2,0,92,82,5) %Vf(08E3E7) %Vb(000000)
-%Vi(context,2,0,92,84,6) %Vf(FFE708) %Vb(000000)
-%Vi(pitch,0,0,-,-,6) %Vf(FFE708) %Vb(000000)
-%Vi(quick,1,0,94,-,6) %Vf(FFE708) %Vb(000000)
-%Vi(rec,2,0,94,84,6) %Vf(FFE708) %Vb(000000)
-%Vi(time,2,0,92,84,6) %Vf(FFE708) %Vb(000000)
-%Vi(usb,0,0,-,-,-) %Vf(08E3E7) %Vb(000000)
-
+%Vi(browser,2,0,92,82,5) %Vf(!P011!) %Vb(!P000!)
+%Vi(context,2,0,92,84,6) %Vf(!P012!) %Vb(!P000!)
+%Vi(default,2,0,92,84,5) %Vf(!P001!) %Vb(!P000!)
+%Vi(pitch,0,0,-,-,6) %Vf(!P031!) %Vb(!P000!)
+%Vi(quick,1,0,94,-,6) %Vf(!P030!) %Vb(!P000!)
+%Vi(rec,2,0,94,84,6) %Vf(!P022!) %Vb(!P000!)
+%Vi(time,2,0,92,84,6) %Vf(!P032!) %Vb(!P000!)
+%Vi(usb,0,0,-,-,-) %Vf(!P033!) %Vb(!P000!)
 
 #### Display onscreen
 
@@ -40,7 +39,7 @@
 #    14 Plugin |
 #    15 Context menu |
 #    16 System Info screen |
-#    17 Time and Date Screen |
+#    17 Time and Date screen |
 #    18 Bookmark browser |
 #    19 Shortcuts menu |
 #    20 Track Info screen (NOT WORKING) |
@@ -50,9 +49,9 @@
 # Set current screen viewports (un-grouped)
 #%?cs<
 #%VI(browser)%Lb(l1,-,20)|
-#%VI(wps)%Lb(l2,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
 #%VI(rec)%Lb(l2,-,13)|
-#%VI(fms)%Lb(l2,-,13)|
+#%VI(browser)%Lb(l2,-,13)|
 #%VI(browser)%Lb(l2,-,13)|
 #%VI(browser)%Lb(l2,-,13)|
 #%VI(browser)%Lb(l2,-,13)|
@@ -68,7 +67,7 @@
 #%VI(time)%Lb(l2,-,13)|
 #%VI(browser)%Lb(l2,-,13)|
 #%VI(browser)%Lb(l2,-,13)|
-#%VI(base)%Lb(l2,-,13)|
+#%VI(default)%Lb(l2,-,13)|
 #%VI(usb)>
 
 # Set current screen viewports (grouped)
@@ -77,42 +76,42 @@
 %?if(%cs,=,11)<%VI(pitch)|
 %?if(%cs,=,17)<%VI(time)|
 %?if(%cs,=,21)<%VI(usb)|
-%?or(%if(%cs,=,20), %if(%cs,>,21))<%VI(base)|
+%?or(%if(%cs,=,20),%if(%cs,>,21))<%VI(default)|
 %?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15))<%VI(context)|
 %VI(browser)>>>>>>>
 %?or(%if(%cs,=,1),%if(%cs,=,12))<%Lb(l1,-,20)|%Lb(l2,-,13)>
 
 # Show current screen viewports (un-grouped)
 #%?cs<
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
 #%Vd(p)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(m)%Vd(s)|
+#%Vd(x)%Vd(s)|
 #%Vd(p)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
-#%Vd(o)|
-#%Vd(o)|
-#%Vd(m)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
-#%Vd(m)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(m)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
-#%Vd(m)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
-#%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>|
-#%Vd(m)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(m)%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)>
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)|
+#%Vd(x)|
+#%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
+#%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
+#%Vd(x)%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)>
 
 # Show current screen viewports (grouped)
-%?if(%cs,=,3)<%Vd(m)%Vd(s)|
-%?if(%cs,=,21)<%Vd(m)%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)|
+%?if(%cs,=,3)<%Vd(x)%Vd(s)|
+%?if(%cs,=,21)<%Vd(x)%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)|
 %?or(%if(%cs,=,2),%if(%cs,=,4))<%Vd(p)%?mv<%Vd(v)|%Vd(s)>|
-%?or(%if(%cs,=,10),%if(%cs,=,11))<%Vd(o)|
-%?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15),%if(%cs,=,17),%if(%cs,=,20),%if(%cs,>,21))<%Vd(m)%?mv<%Vd(v)|%Vd(s)>|
-%Vd(n)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(12),%pE(6))<%Vd(t)|%Vd(s)>>>>>>>>
+%?or(%if(%cs,=,10),%if(%cs,=,11))<%Vd(x)|
+%?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15),%if(%cs,=,17),%if(%cs,=,20),%if(%cs,>,21))<%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
+%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>>>>>>
 
 
 #### Preload fonts
@@ -127,39 +126,32 @@
 %xl(B,battery.bmp,0,0,6)
 %xl(C,charger.bmp,0,0,2)
 %xl(L,lock.bmp)
-%xl(M,mic.bmp)
+%xl(M,mic.bmp,0,0,3)
 %xl(P,bar.bmp)
 
 
 #### Preload list viewport
 
 # Big entries list
-%Vl(l1,2,0,88,20,3) %Vf(FFE708)
-%?Lc<|%Vs(color,08E3E7)>%s%ac%LT
+%Vl(l1,2,0,88,20,3) %Vf(!P013!)
+%?Lc<|%Vs(color,!S013!)>%s%ac%LT
 
 # Little entries list
-%Vl(l2,0,0,92,14,5) %Vf(FFE708)
-%?Lc<|%Vs(color,08E3E7)>%s%LT
+%Vl(l2,0,0,92,14,5) %Vf(!P014!)
+%?Lc<|%Vs(color,!S014!)>%s%LT
 
 
 #### Preload background screen viewport
 
 # Background fix
-%Vl(m,0,0,-,84,-) %VB %Vb(000000)
-%Vl(m,0,0,-,84,-) %Vb(000000)
-
-# Background fix
-%Vl(n,0,0,-,82,-) %VB %Vb(000000)
-%Vl(n,0,0,-,82,-) %Vb(000000)
-
-# Background fix
-%Vl(o,0,0,-,-,-) %VB %Vb(000000)
+%Vl(x,0,0,-,-,-) %VB %Vb(!P000!)
+%Vl(x,0,0,-,-,-) %Vb(!P000!)
 
 
 #### Preload battery screen viewport
 
 %Vl(b,0,0,-,84,-)
-%?bl<%Vf(FFE708)|%Vf(08E3E7)|%Vf(FFE708)>
+%?bl<%Vf(!P035!)|%Vf(!P034!)|%Vf(!P035!)>
 %?bc<
 %?bl<
 %t(.2)%xd(B,1);%t(.1)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
@@ -175,68 +167,68 @@
 #### Preload progress bar viewport
 
 # Background fix
-%Vl(p,0,82,-,2,-) %VB %Vb(000000)
+%Vl(p,0,82,-,2,-) %VB %Vb(!P000!)
 
 # Progress bar
 %Vl(p,0,82,-,2,-)
-%?if(%mp,>,6)<%Vf(08FFE7)|%Vf(FFE708)>
+%?if(%mp,>,6)<%?Rr<%Vf(!S029!)|%Vf(!P029!)>|%Vf(!P021!)>
 %?mp<|%pb(0,0,-,-,P)>
 
 
 #### Preload volume bar viewport
 
 # Volume bar
-%Vl(v,0,86,-,-,-) %VB %Vf(E708E3) %Vb(000000)
+%Vl(v,0,86,-,-,-) %VB %Vf(!P006!) %Vb(!P000!)
 %pv(0,0,-,-,P)
 
 # Volume text
 %Vl(v,0,86,-,-,6)
-%?pv<%Vf(FFE708)|%Vf(FFE708)|%Vf(08FFE7)>
-%?pv< Mute|
- %Sx(Volume) %ar%?pv<0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|100>%% |
- %Sx(Gain) %ar%pv dB >
+%?pv<%Vf(!P007!)|%Vf(!P008!)|%Vf(!P009!)>
+%?pv<%aL Mute|
+%aL %Sx(Volume) %aR%?pv<0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|100>%% |
+%aL %Sx(Gain) %aR%pv dB >
 
 
 #### Preload status bar viewport
 
 # Background fix
-%Vl(s,0,84,-,-,-) %VB %Vb(000000)
-%Vl(s,0,84,-,-,-) %Vb(000000)
+%Vl(s,0,84,-,-,-) %VB %Vb(!P000!)
+%Vl(s,0,84,-,-,-) %Vb(!P000!)
 
 # Battery image
 %Vl(s,1,87,7,-,-)
-%?bl<%Vf(FFE708)|
-%?or(%bc,%if(%bl,>,20))<%Vf(FFE708)|%Vf(FF0820)>|
-%?bp<%Vf(20FF08)|%Vf(FFE708)>>
+%?bl<%Vf(!P002!)|
+%?or(%bc,%if(%bl,>,20))<%Vf(!P002!)|%Vf(!P003!)>|
+%?bp<%Vf(!P004!)|%Vf(!P002!)>>
 %?bc<%xd(C,2)|
 %?bp<%?bl<%t(.5)%xd(C,2);%t(.4);|%xd(C,2)>|
 %?if(%bl,>,5)<%xd(C,1)|%t(.5)%xd(C,1);%t(.4);>>>
 
 # Battery text
 %Vl(s,9,86,33,-,6)
-%?bl<%Vf(FFE708)|
-%?or(%bc,%if(%bl,>,20))<%Vf(FFE708)|%Vf(FF0820)>|
-%?bp<%Vf(20FF08)|%Vf(FFE708)>>
-%?bl<N/D|
+%?bl<%Vf(!P002!)|
+%?or(%bc,%if(%bl,>,20))<%Vf(!P002!)|%Vf(!P003!)>|
+%?bp<%Vf(!P004!)|%Vf(!P002!)>>
+%aL%?bl<N/D|
 %?or(%bc,%if(%bl,>,10),%if(%bt,=,?h ?m))<%bl%%|%t(3)%bl%%;%t(2)%bt;>>
 
-# Lock/Rec image
-%Vl(s,43,86,9,-,-)
-%?if(%mp,=,6)<%Vf(FF0820)|%Vf(FFE708)>
-%?mp<%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(M)|%t(.5)%xd(M);%t(.5);|%xd(L,%mh)>
+# Lock/Mic image
+%Vl(s,43,86,12,-,-)
+%?if(%mp,=,6)<%Vf(!P005!)|%Vf(!P002!)>
+%?mp<%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(M,1)|%t(.5)%xd(M,1);%t(.5);|%xd(L,%mh)>
 
 # Time text
-%Vl(s,53,86,41,-,6) %Vf(FFE708)
-%ar%?cf<%cH:%cM|%cl:%cM%cp>
+%Vl(s,56,86,39,-,6) %Vf(!P002!)
+%aR%?cf<%cH:%cM|%cl:%cM%cp>
 
 
 #### Preload Song bar viewport
 
 # Background fix
-%Vl(t,0,84,-,1,-) %VB %Vb(000000)
+%Vl(t,0,84,-,1,-) %VB %Vb(!P000!)
 
 # Song bar
-%Vl(t,0,85,-,-,6) %Vf(08E3E7)
+%Vl(t,0,85,-,-,6) %Vf(!P010!)
 %s%?if(%mp,>,6)<
-%?tx<%?tz<%tz|%?ty<%ty|%?Tn<%Tn|%tf MHz>>>|%?Tn<%Tn|%tf MHz>>|
+%?tz<%tz|%?ty<%ty|%?Tn<%Tn|%tf MHz>>>|
 %?it<%it|%fn>>
