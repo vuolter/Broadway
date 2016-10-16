@@ -65,11 +65,13 @@ Table of contents
 Installation
 ------------
 
- - Use the official [Rockbox Utility](http://www.rockbox.org/wiki/RockboxUtility#Download) to automatically download & install the theme.
- - Manually download the [latest released package](https://github.com/vuolter/Broadway/releases) and unzip it to the root directory of your device.
+Take the *Blue pill* or take the *Red pill*:
+
+ - **Blue pill:** Use the official [Rockbox Utility](http://www.rockbox.org/wiki/RockboxUtility#Download) to automatically download & install the theme, the story ends.
+ - **Red pill:** Manually download the [latest released package](https://github.com/vuolter/Broadway/releases), unzip it to the root directory of your device and see how deep the rabbit hole goes.
 
 > **Note:**
-> If you choose the manual procedure,
+> If you choose the *Red pill*,
 > make sure the files of the `.rockbox` directory was copied to the **same directory** on your device.
 
 > **Note:**
@@ -120,21 +122,21 @@ Volume gain                           | !P009!
 Song bar                              | !P010!
 Browser screens foreground            | !P011!
 Context screens foreground            | !P012!
-Menu items [selected|unselected]      | !P013! !S013!
-Sub-menu items [selected|unselected]  | !P014! !S014!
+Menu items [selected unselected]      | !P013! !S013!
+Sub-menu items [selected unselected]  | !P014! !S014!
 WPS song title                        | !P016!
 WPS song artist                       | !P017!
 WPS album title                       | !P018!
-WPS playlist status [position|time]   | !P019! !S019!
+WPS playlist status [position time]   | !P019! !S019!
 WPS indicators                        | !P020!
 WPS progress bar                      | !P021!
 Recording screen foreground           | !P022!
-FMS current frequency [playing|muted] | !P024! !S024!
+FMS current frequency [playing muted] | !P024! !S024!
 FMS RDS name                          | !P025!
 FMS RDS text                          | !P026!
-FMS scan/preset text [preset|scan]    | !P027! !S027!
+FMS scan/preset text [preset scan]    | !P027! !S027!
 FMS indicators                        | !P028! !S028!
-FMS progress bar [regular|recording]  | !P029! !S029!
+FMS progress bar [regular recording]  | !P029! !S029!
 Quick screen foreground               | !P030!
 Pitch screen foreground               | !P031!
 Time and Date screen foreground       | !P032!
@@ -165,21 +167,21 @@ Volume gain                           | 0CF2F7        | !P009!
 Song bar                              | 08E3E7        | !P010!
 Browser screens foreground            | 08E3E7        | !P011!
 Context screens foreground            | FFE708        | !P012!
-Menu items [selected|unselected]      | FFE708 08E3E7 | !P013! !S013!
-Sub-menu items [selected|unselected]  | FFE708 08E3E7 | !P014! !S014!
+Menu items [selected unselected]      | FFE708 08E3E7 | !P013! !S013!
+Sub-menu items [selected unselected]  | FFE708 08E3E7 | !P014! !S014!
 WPS song title                        | FFE708        | !P016!
 WPS song artist                       | 08E3E7        | !P017!
 WPS album title                       | 0CF2F7        | !P018!
-WPS playlist status [position|time]   | FFE708 08E3E7 | !P019! !S019!
+WPS playlist status [position time]   | FFE708 08E3E7 | !P019! !S019!
 WPS indicators                        | 08E3E7        | !P020!
 WPS progress bar                      | FFE708        | !P021!
 Recording screen foreground           | FFE708        | !P022!
-FMS current frequency [playing|muted] | FFE708 08E3E7 | !P024! !S024!
+FMS current frequency [playing muted] | FFE708 08E3E7 | !P024! !S024!
 FMS RDS name                          | 08E3E7        | !P025!
 FMS RDS text                          | 0CF2F7        | !P026!
-FMS scan/preset text [preset|scan]    | FFE708 08E3E7 | !P027! !S027!
+FMS scan/preset text [preset scan]    | FFE708 08E3E7 | !P027! !S027!
 FMS indicators                        | 08E3E7 FFE708 | !P028! !S028!
-FMS progress bar [regular|recording]  | 08E3E7 FF0820 | !P029! !S029!
+FMS progress bar [regular recording]  | 08E3E7 FF0820 | !P029! !S029!
 Quick screen foreground               | FFE708        | !P030!
 Pitch screen foreground               | FFE708        | !P031!
 Time and Date screen foreground       | FFE708        | !P032!
