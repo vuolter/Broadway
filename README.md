@@ -1,12 +1,11 @@
 Broadway
 ========
 
-[![Rockbox](https://img.shields.io/badge/Rockbox-3.13-ff69b4.svg?style=flat-square)](http://themes.rockbox.org/index.php?themeid=2500&target=sansaclipzip)
+[![Rockbox](https://img.shields.io/badge/Rockbox-3.13-ff69b4.svg?style=flat-square)](http://www.rockbox.org/)
+[![Rockbox checkwps](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)](http://themes.rockbox.org/index.php?themeid=2500&target=sansaclipzip)
 [![Rockbox rating](https://img.shields.io/badge/rating-5%20stars-brightgreen.svg?style=flat-square)](http://themes.rockbox.org/index.php?themeid=2500&target=sansaclipzip)
 [![GitHub release](https://img.shields.io/github/release/vuolter/Broadway.svg?style=flat-square)](https://github.com/vuolter/Broadway/releases/latest)
 [![GitHub releases](https://img.shields.io/github/downloads/vuolter/Broadway/latest/total.svg?style=flat-square)](https://github.com/vuolter/Broadway/releases/latest)
-[![GitHub tag](https://img.shields.io/github/tag/vuolter/Broadway.svg?style=flat-square)](https://github.com/vuolter/Broadway/tags)
-[![GitHub all releases](https://img.shields.io/github/downloads/vuolter/Broadway/total.svg?style=flat-square)](https://github.com/vuolter/Broadway/releases)
 [![GitHub issues](https://img.shields.io/github/issues/vuolter/Broadway.svg?style=flat-square)](https://github.com/vuolter/Broadway/issues)
 [![License](https://img.shields.io/badge/license-CC%20BY--SA%203.0-blue.svg?style=flat-square)](/LICENSE.md)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/vuolter/Broadway.svg?style=flat-square)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
@@ -33,7 +32,7 @@ like [Ekaran](http://themes.rockbox.org/index.php?themeid=1762&target=sansaclipz
  - Radio signal strength **in percentage**
  - Progress bar now set color and behaviour **according the active screen and playback mode**
  - Refreshed icon pack
- - New battery screen with **real charging animation**
+ - New battery screen with **real charging animation** and estimated battery time left indicator
  - New equalizer indicator in While Playing Screen
  - New repeat mode indicator in While Playing Screen
  - New crossfade indicator in While Playing Screen

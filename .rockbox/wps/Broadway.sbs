@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   4.1
+# Version:   4.2
 # Licence:   CC BY-SA 3.0
 
 
@@ -14,7 +14,7 @@
 %Vi(quick,1,0,94,-,6) %Vf(!P028!) %Vb(!P000!)
 %Vi(rec,2,0,94,84,6) %Vf(!P021!) %Vb(!P000!)
 %Vi(time,2,0,92,84,6) %Vf(!P030!) %Vb(!P000!)
-%Vi(usb,0,0,-,-,-) %Vf(!P031!) %Vb(!P000!)
+%Vi(usb,0,0,-,84,6) %Vf(!P031!) %Vb(!P000!)
 
 #### Display onscreen
 
@@ -46,7 +46,7 @@
 #    21 USB screen
 #  >
 
-# Set current screen viewports (un-grouped)
+# Set current screen ui and list viewports (un-grouped)
 #%?cs<
 #%VI(browser)%Lb(l1,-,20)|
 #%VI(browser)%Lb(l2,-,13)|
@@ -70,7 +70,7 @@
 #%VI(default)%Lb(l2,-,13)|
 #%VI(usb)>
 
-# Set current screen viewports (grouped)
+# Set current screen ui viewport (grouped)
 %?if(%cs,=,3)<%VI(rec)|
 %?if(%cs,=,10)<%VI(quick)|
 %?if(%cs,=,11)<%VI(pitch)|
@@ -79,6 +79,8 @@
 %?or(%if(%cs,=,20),%if(%cs,>,21))<%VI(default)|
 %?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15))<%VI(context)|
 %VI(browser)>>>>>>>
+
+# Show current screen list viewport
 %?or(%if(%cs,=,1),%if(%cs,=,12))<%Lb(l1,-,20)|%Lb(l2,-,13)>
 
 # Show current screen viewports (un-grouped)
@@ -150,7 +152,8 @@
 
 #### Preload battery screen viewport
 
-%Vl(b,0,0,-,84,-)
+# Battery image
+%Vl(b,0,0,-,70,-)
 %?bl<%Vf(!P033!)|%Vf(!P032!)|%Vf(!P033!)>
 %?bc<
 %?bl<
@@ -162,6 +165,11 @@
 %t(.2)%xd(B,5);%t(.1)%xd(B,6);|
 %xd(B,6)>|
 %xd(B,%bl)>
+
+# Battery text
+%Vl(b,0,70,-,12,6)
+%?bl<%Vf(!P033!)|%Vf(!P032!)|%Vf(!P033!)>
+%?if(%bt,=,?h ?m)<|%ac%bt>
 
 
 #### Preload progress bar viewport
