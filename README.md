@@ -132,21 +132,21 @@ Volume gain                           | !P009!
 Song bar                              | !P010!
 Browser screens foreground            | !P011!
 Context screens foreground            | !P012!
-Menu items [selected unselected]      | !P013! !S013!
-Sub-menu items [selected unselected]  | !P014! !S014!
+Menu items [selected][unselected]      | !P013! !S013!
+Sub-menu items [selected][unselected]  | !P014! !S014!
 WPS song title                        | !P015!
 WPS song artist                       | !P016!
 WPS album title                       | !P017!
-WPS playlist status [position time]   | !P018! !S018!
+WPS playlist status [position][time]   | !P018! !S018!
 WPS indicators                        | !P019!
 WPS progress bar                      | !P020!
 Recording screen foreground           | !P021!
-FMS current frequency [playing muted] | !P022! !S022!
+FMS current frequency [playing][muted] | !P022! !S022!
 FMS RDS name                          | !P023!
 FMS RDS text                          | !P024!
-FMS scan/preset text [preset scan]    | !P025! !S025!
+FMS scan/preset text [preset][scan]    | !P025! !S025!
 FMS indicators                        | !P026! !S026!
-FMS progress bar [regular recording]  | !P027! !S027!
+FMS progress bar [regular][recording]  | !P027! !S027!
 Quick screen foreground               | !P028!
 Pitch screen foreground               | !P029!
 Time and Date screen foreground       | !P030!
@@ -162,42 +162,42 @@ Palettes
 
 ### Broadway
 
-Description                           | Codes         | *Default codes*
-------------------------------------- | ------------- | ---------------
-Background                            | 000000        | *!P000!*
-Foreground                            | 08E3E7        | *!P001!*
-Status bar                            | FFE708        | *!P002!*
-Status low battery                    | FF0820        | *!P003!*
-Status fully charged                  | 20FF08        | *!P004!*
-Status recording                      | FF0820        | *!P005!*
-Volume bar                            | B606B3        | *!P006!*
-Volume mute                           | FFE708        | *!P007!*
-Volume level                          | FFE708        | *!P008!*
-Volume gain                           | 0CF2F7        | *!P009!*
-Song bar                              | 0CF2F7        | *!P010!*
-Browser screens foreground            | 08E3E7        | *!P011!*
-Context screens foreground            | FFE708        | *!P012!*
-Menu items [selected unselected]      | FFE708 08E3E7 | *!P013! !S013!*
-Sub-menu items [selected unselected]  | FFE708 08E3E7 | *!P014! !S014!*
-WPS song title                        | FFE708        | *!P015!*
-WPS song artist                       | 08E3E7        | *!P016!*
-WPS album title                       | 0CF2F7        | *!P017!*
-WPS playlist status [position time]   | FFE708 08E3E7 | *!P018! !S018!*
-WPS indicators                        | 08E3E7        | *!P019!*
-WPS progress bar                      | FFE708        | *!P020!*
-Recording screen foreground           | FFE708        | *!P021!*
-FMS current frequency [playing muted] | FFE708 08E3E7 | *!P022! !S022!*
-FMS RDS name                          | 08E3E7        | *!P023!*
-FMS RDS text                          | 0CF2F7        | *!P024!*
-FMS scan/preset text [preset scan]    | FFE708 08E3E7 | *!P025! !S025!*
-FMS indicators                        | 08E3E7 FFE708 | *!P026! !S026!*
-FMS progress bar [regular recording]  | 08E3E7 FF0820 | *!P027! !S027!*
-Quick screen foreground               | FFE708        | *!P028!*
-Pitch screen foreground               | FFE708        | *!P029!*
-Time and Date screen foreground       | FFE708        | *!P030!*
-Battery screen foreground             | 08E3E7        | *!P031!*
-Battery screen charging               | 08E3E7        | *!P032!*
-Battery screen fully charged          | FFE708        | *!P033!*
+Description                            | Codes         | *Default codes*
+-------------------------------------- | ------------- | ---------------
+Background                             | 000000        | *!P000!*
+Foreground                             | 08E3E7        | *!P001!*
+Status bar                             | FFE708        | *!P002!*
+Status low battery                     | FF0820        | *!P003!*
+Status fully charged                   | 20FF08        | *!P004!*
+Status recording                       | FF0820        | *!P005!*
+Volume bar                             | B606B3        | *!P006!*
+Volume mute                            | FFE708        | *!P007!*
+Volume level                           | FFE708        | *!P008!*
+Volume gain                            | 0CF2F7        | *!P009!*
+Song bar                               | 0CF2F7        | *!P010!*
+Browser screens foreground             | 08E3E7        | *!P011!*
+Context screens foreground             | FFE708        | *!P012!*
+Menu items [selected][unselected]      | FFE708 08E3E7 | *!P013! !S013!*
+Sub-menu items [selected][unselected]  | FFE708 08E3E7 | *!P014! !S014!*
+WPS song title                         | FFE708        | *!P015!*
+WPS song artist                        | 08E3E7        | *!P016!*
+WPS album title                        | 0CF2F7        | *!P017!*
+WPS playlist status [position][time]   | FFE708 08E3E7 | *!P018! !S018!*
+WPS indicators                         | 08E3E7        | *!P019!*
+WPS progress bar                       | FFE708        | *!P020!*
+Recording screen foreground            | FFE708        | *!P021!*
+FMS current frequency [playing][muted] | FFE708 08E3E7 | *!P022! !S022!*
+FMS RDS name                           | 08E3E7        | *!P023!*
+FMS RDS text                           | 0CF2F7        | *!P024!*
+FMS scan/preset text [preset][scan]    | FFE708 08E3E7 | *!P025! !S025!*
+FMS indicators                         | 08E3E7 FFE708 | *!P026! !S026!*
+FMS progress bar [regular][recording]  | 08E3E7 FF0820 | *!P027! !S027!*
+Quick screen foreground                | FFE708        | *!P028!*
+Pitch screen foreground                | FFE708        | *!P029!*
+Time and Date screen foreground        | FFE708        | *!P030!*
+Battery screen foreground              | 08E3E7        | *!P031!*
+Battery screen charging                | 08E3E7        | *!P032!*
+Battery screen fully charged           | FFE708        | *!P033!*
 
 > **Note:**
 > Basically, this palette was inspired by the theme
@@ -205,120 +205,120 @@ Battery screen fully charged          | FFE708        | *!P033!*
 
 ### Crayola
 
-Description                           | Codes         | *Default codes*
-------------------------------------- | ------------- | ---------------
-Background                            | ######        | *!P000!*
-Foreground                            | ######        | *!P001!*
-Status bar                            | ######        | *!P002!*
-Status low battery                    | ######        | *!P003!*
-Status fully charged                  | ######        | *!P004!*
-Status recording                      | ######        | *!P005!*
-Volume bar                            | ######        | *!P006!*
-Volume mute                           | ######        | *!P007!*
-Volume level                          | ######        | *!P008!*
-Volume gain                           | ######        | *!P009!*
-Song bar                              | ######        | *!P010!*
-Browser screens foreground            | ######        | *!P011!*
-Context screens foreground            | ######        | *!P012!*
-Menu items [selected unselected]      | ###### ###### | *!P013! !S013!*
-Sub-menu items [selected unselected]  | ###### ###### | *!P014! !S014!*
-WPS song title                        | ######        | *!P015!*
-WPS song artist                       | ######        | *!P016!*
-WPS album title                       | ######        | *!P017!*
-WPS playlist status [position time]   | ###### ###### | *!P018! !S018!*
-WPS indicators                        | ######        | *!P019!*
-WPS progress bar                      | ######        | *!P020!*
-Recording screen foreground           | ######        | *!P021!*
-FMS current frequency [playing muted] | ###### ###### | *!P022! !S022!*
-FMS RDS name                          | ######        | *!P023!*
-FMS RDS text                          | ######        | *!P024!*
-FMS scan/preset text [preset scan]    | ###### ###### | *!P025! !S025!*
-FMS indicators                        | ###### ###### | *!P026! !S026!*
-FMS progress bar [regular recording]  | ###### ###### | *!P027! !S027!*
-Quick screen foreground               | ######        | *!P028!*
-Pitch screen foreground               | ######        | *!P029!*
-Time and Date screen foreground       | ######        | *!P030!*
-Battery screen foreground             | ######        | *!P031!*
-Battery screen charging               | ######        | *!P032!*
-Battery screen fully charged          | ######        | *!P033!*
+Description                            | Codes         | *Default codes*
+-------------------------------------- | ------------- | ---------------
+Background                             | ######        | *!P000!*
+Foreground                             | ######        | *!P001!*
+Status bar                             | ######        | *!P002!*
+Status low battery                     | ######        | *!P003!*
+Status fully charged                   | ######        | *!P004!*
+Status recording                       | ######        | *!P005!*
+Volume bar                             | ######        | *!P006!*
+Volume mute                            | ######        | *!P007!*
+Volume level                           | ######        | *!P008!*
+Volume gain                            | ######        | *!P009!*
+Song bar                               | ######        | *!P010!*
+Browser screens foreground             | ######        | *!P011!*
+Context screens foreground             | ######        | *!P012!*
+Menu items [selected][unselected]      | ###### ###### | *!P013! !S013!*
+Sub-menu items [selected][unselected]  | ###### ###### | *!P014! !S014!*
+WPS song title                         | ######        | *!P015!*
+WPS song artist                        | ######        | *!P016!*
+WPS album title                        | ######        | *!P017!*
+WPS playlist status [position][time]   | ###### ###### | *!P018! !S018!*
+WPS indicators                         | ######        | *!P019!*
+WPS progress bar                       | ######        | *!P020!*
+Recording screen foreground            | ######        | *!P021!*
+FMS current frequency [playing][muted] | ###### ###### | *!P022! !S022!*
+FMS RDS name                           | ######        | *!P023!*
+FMS RDS text                           | ######        | *!P024!*
+FMS scan/preset text [preset][scan]    | ###### ###### | *!P025! !S025!*
+FMS indicators                         | ###### ###### | *!P026! !S026!*
+FMS progress bar [regular][recording]  | ###### ###### | *!P027! !S027!*
+Quick screen foreground                | ######        | *!P028!*
+Pitch screen foreground                | ######        | *!P029!*
+Time and Date screen foreground        | ######        | *!P030!*
+Battery screen foreground              | ######        | *!P031!*
+Battery screen charging                | ######        | *!P032!*
+Battery screen fully charged           | ######        | *!P033!*
 
 ### Lime
 
-Description                           | Codes         | *Default codes*
-------------------------------------- | ------------- | ---------------
-Background                            | ######        | *!P000!*
-Foreground                            | ######        | *!P001!*
-Status bar                            | ######        | *!P002!*
-Status low battery                    | ######        | *!P003!*
-Status fully charged                  | ######        | *!P004!*
-Status recording                      | ######        | *!P005!*
-Volume bar                            | ######        | *!P006!*
-Volume mute                           | ######        | *!P007!*
-Volume level                          | ######        | *!P008!*
-Volume gain                           | ######        | *!P009!*
-Song bar                              | ######        | *!P010!*
-Browser screens foreground            | ######        | *!P011!*
-Context screens foreground            | ######        | *!P012!*
-Menu items [selected unselected]      | ###### ###### | *!P013! !S013!*
-Sub-menu items [selected unselected]  | ###### ###### | *!P014! !S014!*
-WPS song title                        | ######        | *!P015!*
-WPS song artist                       | ######        | *!P016!*
-WPS album title                       | ######        | *!P017!*
-WPS playlist status [position time]   | ###### ###### | *!P018! !S018!*
-WPS indicators                        | ######        | *!P019!*
-WPS progress bar                      | ######        | *!P020!*
-Recording screen foreground           | ######        | *!P021!*
-FMS current frequency [playing muted] | ###### ###### | *!P022! !S022!*
-FMS RDS name                          | ######        | *!P023!*
-FMS RDS text                          | ######        | *!P024!*
-FMS scan/preset text [preset scan]    | ###### ###### | *!P025! !S025!*
-FMS indicators                        | ###### ###### | *!P026! !S026!*
-FMS progress bar [regular recording]  | ###### ###### | *!P027! !S027!*
-Quick screen foreground               | ######        | *!P028!*
-Pitch screen foreground               | ######        | *!P029!*
-Time and Date screen foreground       | ######        | *!P030!*
-Battery screen foreground             | ######        | *!P031!*
-Battery screen charging               | ######        | *!P032!*
-Battery screen fully charged          | ######        | *!P033!*
+Description                            | Codes         | *Default codes*
+-------------------------------------- | ------------- | ---------------
+Background                             | ######        | *!P000!*
+Foreground                             | ######        | *!P001!*
+Status bar                             | ######        | *!P002!*
+Status low battery                     | ######        | *!P003!*
+Status fully charged                   | ######        | *!P004!*
+Status recording                       | ######        | *!P005!*
+Volume bar                             | ######        | *!P006!*
+Volume mute                            | ######        | *!P007!*
+Volume level                           | ######        | *!P008!*
+Volume gain                            | ######        | *!P009!*
+Song bar                               | ######        | *!P010!*
+Browser screens foreground             | ######        | *!P011!*
+Context screens foreground             | ######        | *!P012!*
+Menu items [selected][unselected]      | ###### ###### | *!P013! !S013!*
+Sub-menu items [selected][unselected]  | ###### ###### | *!P014! !S014!*
+WPS song title                         | ######        | *!P015!*
+WPS song artist                        | ######        | *!P016!*
+WPS album title                        | ######        | *!P017!*
+WPS playlist status [position][time]   | ###### ###### | *!P018! !S018!*
+WPS indicators                         | ######        | *!P019!*
+WPS progress bar                       | ######        | *!P020!*
+Recording screen foreground            | ######        | *!P021!*
+FMS current frequency [playing][muted] | ###### ###### | *!P022! !S022!*
+FMS RDS name                           | ######        | *!P023!*
+FMS RDS text                           | ######        | *!P024!*
+FMS scan/preset text [preset][scan]    | ###### ###### | *!P025! !S025!*
+FMS indicators                         | ###### ###### | *!P026! !S026!*
+FMS progress bar [regular][recording]  | ###### ###### | *!P027! !S027!*
+Quick screen foreground                | ######        | *!P028!*
+Pitch screen foreground                | ######        | *!P029!*
+Time and Date screen foreground        | ######        | *!P030!*
+Battery screen foreground              | ######        | *!P031!*
+Battery screen charging                | ######        | *!P032!*
+Battery screen fully charged           | ######        | *!P033!*
 
 ### Scarlet
 
-Description                           | Codes         | *Default codes*
-------------------------------------- | ------------- | ---------------
-Background                            | ######        | *!P000!*
-Foreground                            | ######        | *!P001!*
-Status bar                            | ######        | *!P002!*
-Status low battery                    | ######        | *!P003!*
-Status fully charged                  | ######        | *!P004!*
-Status recording                      | ######        | *!P005!*
-Volume bar                            | ######        | *!P006!*
-Volume mute                           | ######        | *!P007!*
-Volume level                          | ######        | *!P008!*
-Volume gain                           | ######        | *!P009!*
-Song bar                              | ######        | *!P010!*
-Browser screens foreground            | ######        | *!P011!*
-Context screens foreground            | ######        | *!P012!*
-Menu items [selected unselected]      | ###### ###### | *!P013! !S013!*
-Sub-menu items [selected unselected]  | ###### ###### | *!P014! !S014!*
-WPS song title                        | ######        | *!P015!*
-WPS song artist                       | ######        | *!P016!*
-WPS album title                       | ######        | *!P017!*
-WPS playlist status [position time]   | ###### ###### | *!P018! !S018!*
-WPS indicators                        | ######        | *!P019!*
-WPS progress bar                      | ######        | *!P020!*
-Recording screen foreground           | ######        | *!P021!*
-FMS current frequency [playing muted] | ###### ###### | *!P022! !S022!*
-FMS RDS name                          | ######        | *!P023!*
-FMS RDS text                          | ######        | *!P024!*
-FMS scan/preset text [preset scan]    | ###### ###### | *!P025! !S025!*
-FMS indicators                        | ###### ###### | *!P026! !S026!*
-FMS progress bar [regular recording]  | ###### ###### | *!P027! !S027!*
-Quick screen foreground               | ######        | *!P028!*
-Pitch screen foreground               | ######        | *!P029!*
-Time and Date screen foreground       | ######        | *!P030!*
-Battery screen foreground             | ######        | *!P031!*
-Battery screen charging               | ######        | *!P032!*
-Battery screen fully charged          | ######        | *!P033!*
+Description                            | Codes         | *Default codes*
+-------------------------------------- | ------------- | ---------------
+Background                             | ######        | *!P000!*
+Foreground                             | ######        | *!P001!*
+Status bar                             | ######        | *!P002!*
+Status low battery                     | ######        | *!P003!*
+Status fully charged                   | ######        | *!P004!*
+Status recording                       | ######        | *!P005!*
+Volume bar                             | ######        | *!P006!*
+Volume mute                            | ######        | *!P007!*
+Volume level                           | ######        | *!P008!*
+Volume gain                            | ######        | *!P009!*
+Song bar                               | ######        | *!P010!*
+Browser screens foreground             | ######        | *!P011!*
+Context screens foreground             | ######        | *!P012!*
+Menu items [selected][unselected]      | ###### ###### | *!P013! !S013!*
+Sub-menu items [selected][unselected]  | ###### ###### | *!P014! !S014!*
+WPS song title                         | ######        | *!P015!*
+WPS song artist                        | ######        | *!P016!*
+WPS album title                        | ######        | *!P017!*
+WPS playlist status [position][time]   | ###### ###### | *!P018! !S018!*
+WPS indicators                         | ######        | *!P019!*
+WPS progress bar                       | ######        | *!P020!*
+Recording screen foreground            | ######        | *!P021!*
+FMS current frequency [playing][muted] | ###### ###### | *!P022! !S022!*
+FMS RDS name                           | ######        | *!P023!*
+FMS RDS text                           | ######        | *!P024!*
+FMS scan/preset text [preset][scan]    | ###### ###### | *!P025! !S025!*
+FMS indicators                         | ###### ###### | *!P026! !S026!*
+FMS progress bar [regular][recording]  | ###### ###### | *!P027! !S027!*
+Quick screen foreground                | ######        | *!P028!*
+Pitch screen foreground                | ######        | *!P029!*
+Time and Date screen foreground        | ######        | *!P030!*
+Battery screen foreground              | ######        | *!P031!*
+Battery screen charging                | ######        | *!P032!*
+Battery screen fully charged           | ######        | *!P033!*
 
 
 Licensing

@@ -1,8 +1,8 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   4.0
-# Licence:   CC-BY-SA 3.0
+# Version:   4.1
+# Licence:   CC BY-SA 3.0
 
 
 #### Declare ui viewports
@@ -10,11 +10,11 @@
 %Vi(browser,2,0,92,82,5) %Vf(!P011!) %Vb(!P000!)
 %Vi(context,2,0,92,84,6) %Vf(!P012!) %Vb(!P000!)
 %Vi(default,2,0,92,84,5) %Vf(!P001!) %Vb(!P000!)
-%Vi(pitch,0,0,-,-,6) %Vf(!P031!) %Vb(!P000!)
-%Vi(quick,1,0,94,-,6) %Vf(!P030!) %Vb(!P000!)
-%Vi(rec,2,0,94,84,6) %Vf(!P022!) %Vb(!P000!)
-%Vi(time,2,0,92,84,6) %Vf(!P032!) %Vb(!P000!)
-%Vi(usb,0,0,-,-,-) %Vf(!P033!) %Vb(!P000!)
+%Vi(pitch,0,0,-,-,6) %Vf(!P029!) %Vb(!P000!)
+%Vi(quick,1,0,94,-,6) %Vf(!P028!) %Vb(!P000!)
+%Vi(rec,2,0,94,84,6) %Vf(!P021!) %Vb(!P000!)
+%Vi(time,2,0,92,84,6) %Vf(!P030!) %Vb(!P000!)
+%Vi(usb,0,0,-,-,-) %Vf(!P031!) %Vb(!P000!)
 
 #### Display onscreen
 
@@ -151,7 +151,7 @@
 #### Preload battery screen viewport
 
 %Vl(b,0,0,-,84,-)
-%?bl<%Vf(!P035!)|%Vf(!P034!)|%Vf(!P035!)>
+%?bl<%Vf(!P033!)|%Vf(!P032!)|%Vf(!P033!)>
 %?bc<
 %?bl<
 %t(.2)%xd(B,1);%t(.1)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
@@ -171,7 +171,7 @@
 
 # Progress bar
 %Vl(p,0,82,-,2,-)
-%?if(%mp,>,6)<%?Rr<%Vf(!S029!)|%Vf(!P029!)>|%Vf(!P021!)>
+%?if(%mp,>,6)<%?Rr<%Vf(!S027!)|%Vf(!P027!)>|%Vf(!P020!)>
 %?mp<|%pb(0,0,-,-,P)>
 
 

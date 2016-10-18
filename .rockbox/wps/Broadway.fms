@@ -1,8 +1,8 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   4.0
-# Licence:   CC-BY-SA 3.0
+# Version:   4.1
+# Licence:   CC BY-SA 3.0
 
 
 #### Display onscreen
@@ -34,42 +34,39 @@
 %Vl(f,0,0,-,82,-) %VB %Vb(!P000!)
 
 # Current frequency
-%Vl(f,0,0,-,30,2) %Vf(!P024!)
-%?mp<|||||||%Vf(!P024!)|%Vf(!S024!)>
+%Vl(f,0,0,-,30,2) %Vf(!P022!)
+%?mp<|||||||%Vf(!P022!)|%Vf(!S022!)>
 %ac%tf
 
 # RDS name
-%Vl(f,0,30,-,20,3) %Vf(!P025!)
+%Vl(f,0,30,-,20,3) %Vf(!P023!)
 %s%?Rr<
-%?Sr<%Sx(Recording):|:%Sx(Recording)>|
+%?Sr<:%Sx(Recording)|%Sx(Recording):>|
 %ac%?tt<
-%?ty<%ty|%?Tn<%Tn|%<%?if(%ss(0,8,%Sx(Unknown)),=,%Sx(Unknown))<%Sx(Unknown)|n/d>%>>>|
-%t(3)%?if(%ss(0,10,%Sx(Loading...)),=,%Sx(Loading...))<
+%?ty<%ty|%?Tn<%Tn|%(N/D%)>>|
+%t(3)%?Sr<
 %Sx(Loading...)|
-%?Sr<%ss(0,7,%Sx(Loading...))...|...%ss(0,7,%Sx(Loading...))>>;%t(.5);>>
+%?if(%ss(0,10,%Sx(Loading...)),=,%Sx(Loading...))<
+%Sx(Loading...)|
+%ss(0,7,%Sx(Loading...))...>>;%t(.5);>>
 
 # RDS text
-%Vl(f,0,50,-,16,4) %Vf(!P026!)
+%Vl(f,0,50,-,16,4) %Vf(!P024!)
 %s%ac%?Rr<%Rh:%Rn:%Rs|
 %?tx<%?tz<%tz|%t(1)...;%t(.5);%t(.5).;%t(.5)..;>>>
 
 # Scan/preset text
 %Vl(f,1,70,38,12,6)
-%?tm<%Vf(!S027!)|%Vf(!P027!)>
+%?tm<%Vf(!S025!)|%Vf(!P025!)>
 %?tm<%Sx(Scan)|
 %s%aL%?Ti<%Ti|??>/%Tc>
 
-# Speaker image
+# Speaker/Mic image
 %Vl(f,42,70,12,10,-)
-%?tm<%Vf(!S028!)|%Vf(!P028!)>
-%xd(K,%ts)
-
-# Mic image
-%Vl(f,54,70,12,10,-)
-%?tm<%Vf(!S028!)|%Vf(!P028!)>
-%?Rr<%xd(M,%Rm,1)>
+%?tm<%Vf(!S026!)|%Vf(!P026!)>
+%t(4)%xd(K,%ts);%?Rr<%t(4)%xd(M,%Rm,1)|%t(0)>;
 
 # Signal strength
-%Vl(f,69,70,26,12,6)
-%?tm<%Vf(!S028!)|%Vf(!P028!)>
+%Vl(f,57,70,38,12,6)
+%?tm<%Vf(!S026!)|%Vf(!P026!)>
 %aR%?tr<0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|100>%%
