@@ -9,22 +9,14 @@
 Broadway
 ========
 
-[![Rockbox](https://img.shields.io/badge/Rockbox-3.13-ff69b4.svg?style=flat-square)]
-(http://www.rockbox.org/)
-[![Rockbox checkwps](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)]
-(http://themes.rockbox.org/index.php?themeid=2500&target=sansaclipzip)
-[![GitHub release](https://img.shields.io/github/release/vuolter/Broadway.svg?style=flat-square)]
-(https://github.com/vuolter/Broadway/releases/latest)
-[![GitHub releases](https://img.shields.io/github/downloads/vuolter/Broadway/latest/total.svg?style=flat-square)]
-(https://github.com/vuolter/Broadway/releases/latest)
-[![GitHub issues](https://img.shields.io/github/issues/vuolter/Broadway.svg?style=flat-square)]
-(https://github.com/vuolter/Broadway/issues)
-[![License](https://img.shields.io/badge/license-CC%20BY--SA%203.0-blue.svg?style=flat-square)]
-(/LICENSE.md)
-[![GitHub stars](https://img.shields.io/github/stars/vuolter/Broadway.svg?style=flat-square)]
-(https://github.com/vuolter/Broadway/stargazers)
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/WalterPurcaro.svg?style=social)]
-(https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
+[![Rockbox](https://img.shields.io/badge/Rockbox-3.13-ff69b4.svg?style=flat-square)](http://www.rockbox.org/)
+[![Rockbox checkwps](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)](http://themes.rockbox.org/index.php?themeid=2500&target=sansaclipzip)
+[![GitHub release](https://img.shields.io/github/release/vuolter/Broadway.svg?style=flat-square)](https://github.com/vuolter/Broadway/releases/latest)
+[![GitHub releases](https://img.shields.io/github/downloads/vuolter/Broadway/latest/total.svg?style=flat-square)](https://github.com/vuolter/Broadway/releases/latest)
+[![GitHub issues](https://img.shields.io/github/issues/vuolter/Broadway.svg?style=flat-square)](https://github.com/vuolter/Broadway/issues)
+[![License](https://img.shields.io/badge/license-CC%20BY--SA%203.0-blue.svg?style=flat-square)](/LICENSE.md)
+[![GitHub stars](https://img.shields.io/github/stars/vuolter/Broadway.svg?style=flat-square)](https://github.com/vuolter/Broadway/stargazers)
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/WalterPurcaro.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
 
 An impressive theme for [Rockbox](http://www.rockbox.org/),
 designed for the **SanDisk Sansa Clip Zip**, like [Ekaran]
