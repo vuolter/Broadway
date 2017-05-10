@@ -1,11 +1,11 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   4.3
+# Version:   5.0
 # Licence:   CC BY-SA 3.0
 
 
-#### Display onscreen
+#### Display on screen
 
 # Show sbs status bar
 %we
@@ -24,12 +24,12 @@
 
 #### Preload images
 
-%xl(D,dithering.bmp)
 %xl(E,equalizer.bmp)
 %xl(G,replaygain.bmp)
 %xl(R,repeat.bmp,0,0,4)
 %xl(S,shuffle.bmp)
-%xl(X,crossfade.bmp,0,0,5)
+%xl(T,trackskip.bmp)
+%xl(X,crossfade.bmp)
 
 
 #### Preload screen viewport
@@ -41,7 +41,7 @@
 %Vl(w,0,0,-,30,2) %Vf(!P015!)
 %s%?it<%it|%fn>
 
-#@NOTE:
+# NOTE:
 #  %?mp<
 #    0 Stop |
 #    1 Play |
@@ -51,33 +51,26 @@
 #    5 Recording |
 #    6 Recording paused |
 #    7 FM Radio playing |
-#    8 FM Radio paused (muted)
-#  >
+#    8 FM Radio paused (muted) >
 
 # Song artist
-#@NOTE: `if` statement doesn't work with `%mp` in wps and fms!
+# NOTE: `if` statement doesn't work with `%mp` in wps and fms!
 %Vl(w,0,30,-,20,3) %Vf(!P016!)
-%s%?and(%Fp,%if(%px,>,90))<
-%Sx(Next:)|
+%s%?and(%Fp,%if(%px,>,90))<%Sx(Next:)|
 %?mp<|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%(N/D%)>>>>|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%(N/D%)>>>>|
-%?and(%Fp,%if(%px,>,50))<
-%Sx(Next:)|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%(N/D%)>>>>>|
-%?ia<%ia|%?iA<%iA|%?d(2)<%?and(%d(3),%or(%if(%d(2),=,%Sx(Album)),%if(%d(2),=,ALBUM),%if(%d(2),=,Album),%if(%d(2),=,album),%if(%d(2),=,EP),%if(%d(2),=,ep)))<%d(3)|%d(2)>|%?d(1)<%d(1)|%(N/D%)>>>>>>
+%?ia<%ia|%?iA<%iA|%?d(3)<%?or(%if(%ss(1,4,%d(3)),=,lbum),%if(%ss(1,-,%d(3)),=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(3)),=,ingles),%if(%ss(1,6,%d(3)),=,ollabs),%if(%d(3),=,Ep),%if(%d(3),=,ep))<N/D|%d(3)>|%?d(2)<%?or(%if(%ss(1,4,%d(2)),=,lbum),%if(%ss(1,-,%d(2)),=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(2)),=,ingles),%if(%ss(1,6,%d(2)),=,ollabs),%if(%d(2),=,Ep),%if(%d(2),=,ep))<N/D|%d(2)>|%?and(%d(1),%if(%ss(1,4,%d(1)),!=,lbum),%if(%ss(1,-,%d(1)),!=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(1)),!=,ingles),%if(%ss(1,6,%d(1)),!=,ollabs),%if(%d(1),!=,Ep),%if(%d(1),!=,ep))<%d(1)|N/D>>>>>|
+%?ia<%ia|%?iA<%iA|%?d(3)<%?or(%if(%ss(1,4,%d(3)),=,lbum),%if(%ss(1,-,%d(3)),=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(3)),=,ingles),%if(%ss(1,6,%d(3)),=,ollabs),%if(%d(3),=,Ep),%if(%d(3),=,ep))<N/D|%d(3)>|%?d(2)<%?or(%if(%ss(1,4,%d(2)),=,lbum),%if(%ss(1,-,%d(2)),=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(2)),=,ingles),%if(%ss(1,6,%d(2)),=,ollabs),%if(%d(2),=,Ep),%if(%d(2),=,ep))<N/D|%d(2)>|%?and(%d(1),%if(%ss(1,4,%d(1)),!=,lbum),%if(%ss(1,-,%d(1)),!=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(1)),!=,ingles),%if(%ss(1,6,%d(1)),!=,ollabs),%if(%d(1),!=,Ep),%if(%d(1),!=,ep))<%d(1)|N/D>>>>>|
+%?Fp<%Sx(Next:)|%Sx(End of Song List)>|
+%?ia<%ia|%?iA<%iA|%?d(3)<%?or(%if(%ss(1,4,%d(3)),=,lbum),%if(%ss(1,-,%d(3)),=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(3)),=,ingles),%if(%ss(1,6,%d(3)),=,ollabs),%if(%d(3),=,Ep),%if(%d(3),=,ep))<N/D|%d(3)>|%?d(2)<%?or(%if(%ss(1,4,%d(2)),=,lbum),%if(%ss(1,-,%d(2)),=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(2)),=,ingles),%if(%ss(1,6,%d(2)),=,ollabs),%if(%d(2),=,Ep),%if(%d(2),=,ep))<N/D|%d(2)>|%?and(%d(1),%if(%ss(1,4,%d(1)),!=,lbum),%if(%ss(1,-,%d(1)),!=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(1)),!=,ingles),%if(%ss(1,6,%d(1)),!=,ollabs),%if(%d(1),!=,Ep),%if(%d(1),!=,ep))<%d(1)|N/D>>>>>>>
 
 # Album title
 %Vl(w,0,50,-,16,4) %Vf(!P017!)
-%s%?and(%Fp,%if(%px,>,90))<
-%?It<%It|%Fn>|
+%s%?and(%Fp,%if(%px,>,90))<%?It<%It|%Fn>|
 %?mp<|
-%?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;|
-%?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;|
-%?and(%Fp,%if(%px,>,50))<
-%?It<%It|%Fn>|
-%?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>|
-%?id<%t(8)%id|%?and(%d(1),%d(2))<%t(8)%d(1)|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>;>>
+%?id<%t(8)%id|%?d(2)<%?and(%d(1),%if(%ss(1,4,%d(1)),!=,lbum),%if(%ss(1,-,%d(1)),!=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(1)),!=,ingles),%if(%ss(1,6,%d(1)),!=,ollabs),%if(%d(1),!=,Ep),%if(%d(1),!=,ep))<%t(8)%d(1)|%t(0)>|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>|
+%?id<%t(8)%id|%?d(2)<%?and(%d(1),%if(%ss(1,4,%d(1)),!=,lbum),%if(%ss(1,-,%d(1)),!=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(1)),!=,ingles),%if(%ss(1,6,%d(1)),!=,ollabs),%if(%d(1),!=,Ep),%if(%d(1),!=,ep))<%t(8)%d(1)|%t(0)>|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>|
+%?Fp<%?It<%It|%Fn>>|
+%?id<%t(8)%id|%?d(2)<%?and(%d(1),%if(%ss(1,4,%d(1)),!=,lbum),%if(%ss(1,-,%d(1)),!=,%ss(1,-,%Sx(Album))),%if(%ss(1,6,%d(1)),!=,ingles),%if(%ss(1,6,%d(1)),!=,ollabs),%if(%d(1),!=,Ep),%if(%d(1),!=,ep))<%t(8)%d(1)|%t(0)>|%t(0)>>;%?iy<%t(3)%iy|%?in<%t(3)%#%in|%t(0)>>;%?ig<%t(3)%ig|%?iG<%t(3)%iG|%t(0)>>>>
 
 # Playlist status
 %Vl(w,1,70,60,12,6)
@@ -89,23 +82,19 @@
 %?pS(4)<%Vf(!P018!)|%Vf(!S018!)>>
 %s%aL%?mp<|
 %?pS(4)<%pp/%pe|%pc/%pt>|
-%t(.5)%pc/%pt;%t(.5);|
+%t(1)%pc/%pt;%t(.5)|
 %pc/%pt|
 %pc/%pt|
 %?pS(4)<%pp/%pe|%pc/%pt>>
 
 # Equalizer/Crossfade image
-%Vl(w,64,70,14,10,-) %Vf(!P019!)
-%t(8)%?mm<|%?ps<%xd(E,%St(eq enabled))>>;%?xf<%t(0)|%t(4)%xd(X,%xf,-1)>;
+%Vl(w,64,70,10,10,-) %Vf(!P019!)
+%t(6)%?mm<|%?ps<%xd(E,%St(eq enabled))>>;%?St(prevent track skip)<%t(6)%?rg<|%?xf<|%xd(X)>>|%?rg<%t(0)|%t(6)>>
 
-# Shuffle image
-%Vl(w,74,70,10,10,-) %Vf(!P019!)
-%t(8)%?ps<%?mm<%xd(E,%St(eq enabled))|%xd(S,%ps)>|%?mm<|%xd(E,%St(eq enabled))>>;%?xf<%t(0)|%t(4)>;
-
-# Dithering image
-%Vl(w,78,70,6,10,-) %Vf(!P019!)
-%t(8);%?St(dithering enabled)<%t(4)%xd(D,%St(dithering enabled))|%t(0)>;
+# Shuffle/Prevent Track Skip image
+%Vl(w,74,70,10,10,-) %Vf(!P037!)
+%t(6)%?mm<%?ps<%xd(E,%St(eq enabled))>|%?ps<%xd(S)|%xd(E,%St(eq enabled))>>;%?St(prevent track skip)<%t(6)%?rg<%?xf<|%xd(X)>|%t(6)%xd(T)>|%?rg<%?xf<%t(0)|%t(6)>|%t(6)%?xf<|%xd(X)>>>
 
 # Repeat/ReplayGain image
-%Vl(w,84,70,11,10,-) %Vf(!P019!)
-%t(8)%?mm<%?ps<%xd(S,%ps)|%xd(E,%St(eq enabled))>|%xd(R,%mm,-1)>;%?rg<%t(0)|%t(4)%xd(G)>;
+%Vl(w,84,70,11,10,-) %Vf(!P038!)
+%t(6)%?mm<%?ps<%xd(S)|%xd(E,%St(eq enabled))>|%xd(R,%mm,-1)>;%?St(prevent track skip)<%t(6)%?rg<%xd(T)|%xd(G)>|%?rg<%?xf<%t(0)|%t(6)%xd(X)>|%t(6)%xd(G)>>

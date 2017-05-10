@@ -1,7 +1,7 @@
 # Theme:     Broadway
 # Author:    Walter Purcaro <vuolter@gmail.com>
 # Platform:  SanDisk Sansa Clip Zip
-# Version:   4.3
+# Version:   5.0
 # Licence:   CC BY-SA 3.0
 
 
@@ -16,12 +16,13 @@
 %Vi(time,2,0,92,84,6) %Vf(!P030!) %Vb(!P000!)
 %Vi(usb,0,0,-,84,6) %Vf(!P031!) %Vb(!P000!)
 
-#### Display onscreen
+
+#### Display on screen
 
 # Hide inbuilt status bar
 %wd
 
-#@NOTE:
+# NOTE:
 #  %?cs<
 #    1  Menus |
 #    2  WPS |
@@ -43,8 +44,7 @@
 #    18 Bookmark browser |
 #    19 Shortcuts menu |
 #    20 Track Info screen (NOT WORKING) |
-#    21 USB screen
-#  >
+#    21 USB screen >
 
 # Set current screen ui and list viewports (un-grouped)
 #%?cs<
@@ -85,25 +85,25 @@
 
 # Show current screen viewports (un-grouped)
 #%?cs<
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(8),%if(%LT,=,%Sx(Now Playing)),%if(%LT,=,%Sx(FM Radio)),%if(%LT,=,%Sx(Recording)))<%Vd(i)|%Vd(s)>>>|
 #%Vd(p)%?mv<%Vd(v)|%Vd(s)>|
 #%Vd(x)%Vd(s)|
 #%Vd(p)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?pS(8)<%Vd(i)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?pS(8)<%Vd(i)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?pS(8)<%Vd(i)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?pS(8)<%Vd(i)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?pS(8)<%Vd(i)|%Vd(s)>>>|
 #%Vd(x)|
 #%Vd(x)|
 #%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?pS(8)<%Vd(i)|%Vd(s)>>>|
 #%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
 #%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?pS(8)<%Vd(i)|%Vd(s)>>>|
 #%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
-#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?pS(8)<%Vd(i)|%Vd(s)>>>|
+#%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?pS(8)<%Vd(i)|%Vd(s)>>>|
 #%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
 #%Vd(x)%?or(%bc,%and(%bp,%if(%bl,=,100)))<%Vd(b)>%Vd(s)>
 
@@ -113,7 +113,7 @@
 %?or(%if(%cs,=,2),%if(%cs,=,4))<%Vd(p)%?mv<%Vd(v)|%Vd(s)>|
 %?or(%if(%cs,=,10),%if(%cs,=,11))<%Vd(x)|
 %?or(%if(%cs,=,12),%if(%cs,=,14),%if(%cs,=,15),%if(%cs,=,17),%if(%cs,=,20),%if(%cs,>,21))<%Vd(x)%?mv<%Vd(v)|%Vd(s)>|
-%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(16),%pE(8))<%Vd(t)|%Vd(s)>>>>>>>>
+%Vd(x)%Vd(p)%?mv<%Vd(v)|%?mp<%Vd(s)|%?or(%pS(8),%if(%LT,=,%Sx(Now Playing)),%if(%LT,=,%Sx(FM Radio)),%if(%LT,=,%Sx(Recording)))<%Vd(i)|%Vd(s)>>>>>>>>
 
 
 #### Preload fonts
@@ -128,7 +128,7 @@
 %xl(B,battery.bmp,0,0,6)
 %xl(C,charger.bmp,0,0,2)
 %xl(L,lock.bmp)
-%xl(M,mic.bmp,0,0,3)
+%xl(M,mic.bmp)
 %xl(P,bar.bmp)
 
 
@@ -155,21 +155,19 @@
 # Battery image
 %Vl(b,0,0,-,70,-)
 %?bl<%Vf(!P033!)|%Vf(!P032!)|%Vf(!P033!)>
-%?bc<
-%?bl<
-%t(.2)%xd(B,1);%t(.1)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
-%t(.2)%xd(B,1);%t(.1)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
-%t(.2)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
-%t(.2)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
-%t(.2)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6);|
-%t(.2)%xd(B,5);%t(.1)%xd(B,6);|
+%?bc<%?bl<%t(.2)%xd(B,1);%t(.1)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6)|
+%t(.2)%xd(B,1);%t(.1)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6)|
+%t(.2)%xd(B,2);%t(.1)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6)|
+%t(.2)%xd(B,3);%t(.1)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6)|
+%t(.2)%xd(B,4);%t(.1)%xd(B,5);%t(.1)%xd(B,6)|
+%t(.2)%xd(B,5);%t(.1)%xd(B,6)|
 %xd(B,6)>|
 %xd(B,%bl)>
 
 # Battery text
 %Vl(b,0,70,-,12,6)
 %?bl<%Vf(!P033!)|%Vf(!P032!)|%Vf(!P033!)>
-%?if(%bt,=,?h ?m)<|%ac%bt>
+%s%ac%?if(%bt,=,?h ?m)<|%bt>
 
 
 #### Preload progress bar viewport
@@ -179,7 +177,7 @@
 
 # Progress bar
 %Vl(p,0,82,-,2,-)
-%?if(%mp,>,6)<%?Rr<%Vf(!S027!)|%Vf(!P027!)>|%Vf(!P020!)>
+%?if(%mp,>,7)<%Vf(!P027!)|%Vf(!P020!)>
 %?mp<|%pb(0,0,-,-,P)>
 
 
@@ -192,9 +190,9 @@
 # Volume text
 %Vl(v,0,86,-,-,6)
 %?pv<%Vf(!P007!)|%Vf(!P008!)|%Vf(!P009!)>
-%?pv<%aL Mute|
-%aL %Sx(Volume) %aR%?pv<0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|100>%% |
-%aL %Sx(Gain) %aR%pv dB >
+%aL %?pv<%?Sr<%Sx(Off) %Sx(Volume)|%Sx(Volume) %Sx(Off)>|
+%Sx(Volume) %aR%?pv<0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|100>%% |
+%Sx(Gain) %aR%pv dB >
 
 
 #### Preload status bar viewport
@@ -209,8 +207,8 @@
 %?or(%bc,%if(%bl,>,20))<%Vf(!P002!)|%Vf(!P003!)>|
 %?bp<%Vf(!P004!)|%Vf(!P002!)>>
 %?bc<%xd(C,2)|
-%?bp<%?bl<%t(.5)%xd(C,2);%t(.4);|%xd(C,2)>|
-%?if(%bl,>,5)<%xd(C,1)|%t(.5)%xd(C,1);%t(.4);>>>
+%?bp<%?bl<%t(.5)%xd(C,2);%t(.4)|%xd(C,2)>|
+%?if(%bl,>,5)<%xd(C,1)|%t(.5)%xd(C,1);%t(.4)>>>
 
 # Battery text
 %Vl(s,9,86,33,-,6)
@@ -218,25 +216,25 @@
 %?or(%bc,%if(%bl,>,20))<%Vf(!P002!)|%Vf(!P003!)>|
 %?bp<%Vf(!P004!)|%Vf(!P002!)>>
 %aL%?bl<N/D|
-%?or(%bc,%if(%bl,>,10),%if(%bt,=,?h ?m))<%bl%%|%t(3)%bl%%;%t(2)%bt;>>
+%?or(%bc,%if(%bl,>,10),%if(%bt,=,?h ?m))<%bl%%|%t(3)%bl%%;%t(2)%bt>>
 
 # Lock/Mic image
-%Vl(s,43,86,12,-,-)
-%?if(%mp,=,6)<%Vf(!P005!)|%Vf(!P002!)>
-%?mp<%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(L,%mh)|%xd(M,1)|%t(.5)%xd(M,1);%t(.5);|%xd(L,%mh)>
+%Vl(s,43,86,9,-,-)
+%?and(%Rr,%if(%mp,<,8))<%Vf(!P005!)|%Vf(!P002!)>
+%?and(%Rr,%if(%mp,<,8))<%xd(M)|%xd(L,%mh)>
 
 # Time text
-%Vl(s,56,86,39,-,6) %Vf(!P002!)
+%Vl(s,53,86,42,-,6) %Vf(!P002!)
 %aR%?cf<%cH:%cM|%cl:%cM%cp>
 
 
-#### Preload Song bar viewport
+#### Preload info bar viewport
 
 # Background fix
-%Vl(t,0,84,-,1,-) %VB %Vb(!P000!)
+%Vl(i,0,84,-,1,-) %VB %Vb(!P000!)
 
-# Song bar
-%Vl(t,0,85,-,-,6) %Vf(!P010!)
-%s%?if(%mp,>,6)<
-%?tz<%tz|%?ty<%ty|%?Tn<%Tn|%tf MHz>>>|
-%?it<%it|%fn>>
+# Info bar
+%Vl(i,0,85,-,-,6) %Vf(!P010!)
+%s%?if(%LT,=,%Sx(FM Radio))<%?if(%mp,>,7)<%?Sr<%?tz<%tz :>%?ty<%ty >%tf|%tf%?ty< %ty>%?tz<: %tz>>|%aL%Sx(Off)>|
+%?if(%LT,=,%Sx(Recording))<%aL%?Rr<%Sx(On)|%Sx(Off)> %aR%Rh:%Rn:%Rs|
+%?it<%it|%fn>>>
