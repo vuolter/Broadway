@@ -9,20 +9,31 @@
 Broadway
 ========
 
-[![Rockbox](https://img.shields.io/badge/Rockbox-3.14-ff69b4.svg?style=flat-square)](http://www.rockbox.org/)
-[![Rockbox checkwps](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)](http://themes.rockbox.org/index.php?themeid=2500&target=sansaclipzip)
+[![Rockbox Version](https://img.shields.io/badge/rockbox-3.14-blue.svg?style=flat-square)](https://www.rockbox.org)
 [![GitHub release](https://img.shields.io/github/release/vuolter/Broadway.svg?style=flat-square)](https://github.com/vuolter/Broadway/releases/latest)
-[![GitHub releases](https://img.shields.io/github/downloads/vuolter/Broadway/latest/total.svg?style=flat-square)](https://github.com/vuolter/Broadway/releases/latest)
-[![GitHub issues](https://img.shields.io/github/issues/vuolter/Broadway.svg?style=flat-square)](https://github.com/vuolter/Broadway/issues)
-[![License](https://img.shields.io/badge/license-CC%20BY--SA%203.0-blue.svg?style=flat-square)](/LICENSE.md)
-[![GitHub stars](https://img.shields.io/github/stars/vuolter/Broadway.svg?style=flat-square)](https://github.com/vuolter/Broadway/stargazers)
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/WalterPurcaro.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
+[![Rockbox License](https://img.shields.io/badge/license-CC%20BY--SA%203.0-blue.svg?style=flat-square)](/LICENSE.md)
 
-An impressive theme for [Rockbox](http://www.rockbox.org/),
-designed for the **SanDisk Sansa Clip Zip**, like
-[Ekaran](http://themes.rockbox.org/index.php?themeid=1762&target=sansaclipzip),
-but with *few* **extra**...
+Inspired by the popular [Ekaran theme](http://themes.rockbox.org/index.php?themeid=1762&target=sansaclipzip),
 
+One of the most fully-comprehensive UI currently available for the music player [SanDisk Sansa Clip Zip](http://themes.rockbox.org/index.php?themeid=2500&target=sansaclipzip),
+
+under [Rockbox](http://www.rockbox.org/).
+
+- [Features](#features)
+- [Installation](#installation)
+- [Troubleshooting](#troubleshooting)
+- [Notice](#notice)
+- [Customization](#customization)
+- [Palette](#palette)
+- [Licensing](#licensing)
+
+
+Features
+--------
+
+Main feature list (I may have miss something... but that's okay):
+
+- High-contrast skin
 - Clean and neat source-code rewritten according the latest Rockbox
 specifications
 - Improved FM Radio Screen and While Playing Screen
@@ -55,25 +66,14 @@ left indicator
 - Charge indicator blinks if connected charger is not charging and warns if low
 battery, reporting estimated time left
 - Detailed track info in While Playing Screen *(playlist position, more album
-info. next track title)*
+info, next track title)*
 - *Next track* info in While Playing Screen
 - Recording support in FM Radio Screen
 - **Custom color support** *(see to the [Customization section](#customization))*
 - Fully text translated
 - Right-To-Left languages support
 - No more fatty headers on screen
-- **Lots of skin bugs now fixed!**
-
-
-Table of contents
------------------
-
-- [Installation](#installation)
-- [Troubleshooting](#troubleshooting)
-- [Notice](#notice)
-- [Customization](#customization)
-- [Palette](#palette)
-- [Licensing](#licensing)
+- **Lots of baseskin bugs have been fixed!**
 
 
 Installation
